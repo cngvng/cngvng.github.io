@@ -12,7 +12,7 @@ Thank you for visiting my website!
 
 Tuan-Cuong Vuong
 ======
-I am an undergraduate student at [Phenikaa University](https://phenikaa-uni.edu.vn/en) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge. where I am studying computer science and a research student at [AIoT Lab](https://aiot.phenikaa-uni.edu.vn/).
+I am an undergraduate student at [Phenikaa University](https://phenikaa-uni.edu.vn/en), where I am studying computer science and a research student at [AIoT Lab](https://aiot.phenikaa-uni.edu.vn/).
 
 My work revolves around image processing, and building computer vision models to solve real-world problems such as: Face attendance, abnormal pixel recognition, ... I am very interested in the Generative model, because its potential is so great that it has not been fully exploited.
 
