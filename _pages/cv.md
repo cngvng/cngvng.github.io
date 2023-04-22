@@ -20,6 +20,16 @@ Work experience
   * Duties included: Research on Generative model, Computer Vision and Internet of Things.
   * Supervisor: PhD. Thien Van Luong
 
+* Summer 2021: Research Student
+  * Phenikaa University
+  * Duties included: Research on Generative model, Computer Vision and Internet of Things.
+  * Supervisor: PhD. Thien Van Luong
+
+* Spring 2023: AI Engineer Intern
+  * Phenikaa-X
+  * Duties inclluded: Working in the autonomous vehicle industry.
+  
+
 <!-- * Fall 2015: Research Assistant
   * Github University
   * Duties included: Merging pull requests
