@@ -12,8 +12,8 @@ Thank you for visiting my website!
 
 Tuan-Cuong Vuong
 ======
-I am an undergraduate student at [Phenikaa University](https://phenikaa-uni.edu.vn/en), where I am studying computer science and a research student at [AIoT Lab](https://aiot.phenikaa-uni.edu.vn/), under the guidance of [Dr. Luong Van Thien](https://tvluong.wordpress.com/).
+I am currently pursuing a Bachelor's degree in Computer Science with a specialization in Data Science and Artificial Intelligence program at [Phenikaa University](https://phenikaa-uni.edu.vn/en). Additionally, I am engaged as a research student at the [AIoT Lab](https://aiot.phenikaa-uni.edu.vn/), where I am mentored by the esteemed [Dr. Luong Van Thien](https://tvluong.wordpress.com/).
 
-My work revolves around image processing, and building computer vision models to solve real-world problems such as: Face attendance, abnormal pixel recognition, ... I am very interested in the Generative model, because its potential is so great that it has not been fully exploited.
+My primary research interests involve leveraging computer vision techniques to solve real-world challenges, such as virtual try-on applications and anomaly detection with time-series data. I am particularly fascinated by the potential of Generative Models, especially the Diffusion Model, which holds immense promise in diverse fields of life.
 
-In my free time, I enjoy reading books and playing soccer and many other interesting things.
+During my leisure time, I indulge in reading books and playing soccer. These hobbies have helped me maintain a balance between my academic and personal pursuits, enabling me to perform exceptionally in both domains.
