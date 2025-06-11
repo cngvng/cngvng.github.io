@@ -10,391 +10,360 @@ redirect_from:
 {% include base_path %}
 
 <div class="cv-container">
-  <!-- Download CV button -->
-  <div class="download-cv">
-    <a href="/files/Tuan_CuongVuong_AI_Research_CV.pdf" class="btn btn-primary">
-      <i class="fa fa-download" aria-hidden="true"></i> Download Full CV as PDF
-    </a>
+
+  <!-- PDF Preview -->
+  <div class="pdf-preview">
+    <div class="pdf-container">
+      <iframe 
+        id="cv-pdf-viewer"
+        src="/files/Tuan_CuongVuong_AI_Research_CV.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH"
+        width="100%"
+        height="800px"
+        style="border: 1px solid #ddd; border-radius: 4px;">
+        
+        <!-- Fallback for browsers that don't support PDF embedding -->
+        <div class="pdf-fallback">
+          <p>Your browser doesn't support PDF viewing. Please download the file:</p>
+          <a href="/files/Tuan_CuongVuong_AI_Research_CV.pdf" class="btn btn--primary">
+            <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+          </a>
+        </div>
+      </iframe>
+    </div>
+    
+    <!-- Mobile notice -->
+    <div class="mobile-notice">
+      <p><strong>Note:</strong> On mobile devices, you may need to download the PDF for the best viewing experience.</p>
+    </div>
   </div>
 
-  <!-- Objective Section -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-target" aria-hidden="true"></i> Objective
-    </h2>
-    <div class="objective-content">
-      <p>Aspiring AI researcher with strong academic and research background in Generative AI and Multi-Agent Systems. Seeking a PhD position to further explore cutting-edge AI techniques.</p>
-    </div>
-  </section>
+  </div> <!-- End details-tab -->
+</div> <!-- End cv-container -->
 
-  <!-- Research Background Section -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-microscope" aria-hidden="true"></i> Research Background
-    </h2>
-    <div class="research-areas">
-      <div class="research-item">
-        <h4>Joint Embedding Predictive Architecture (JEPA)</h4>
-        <p>Designing and evaluating JEPA-based models to learn compressed, predictive representations across language, vision, and structured data</p>
-      </div>
-      <div class="research-item">
-        <h4>Agentic AI & AGI</h4>
-        <p>Architecting multi-agent frameworks that collaborate, adapt, and learn to solve complex tasks autonomously</p>
-      </div>
-      <div class="research-item">
-        <h4>Scalability & Security of LLMs</h4>
-        <p>Quantization, self-hosting, and DevOps pipelines for private, low-latency, and cost-effective inference at scale</p>
-      </div>
-    </div>
-  </section>
+<style>
+/* CV Container Styles */
+.cv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  <!-- Education Section -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-graduation-cap" aria-hidden="true"></i> Education
-    </h2>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <h3>Bachelor of Science in Computer Science</h3>
-          <p class="timeline-specialization">Specialization in Data Science and Artificial Intelligence</p>
-          <p class="timeline-date">September 2021 - June 2025</p>
-          <p class="timeline-institution">Phenikaa University, Ha Noi, Vietnam</p>
-          <p class="timeline-gpa">GPA: 3.21/4.00</p>
-          <p class="timeline-coursework">Coursework includes Data Science, Machine Learning, Computer Vision, and Natural Language Processing</p>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Tab Controls */
+.cv-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-  <!-- Publications Section -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-file-text" aria-hidden="true"></i> Patents and Publications
-    </h2>
-    
-    <!-- Journal Papers -->
-    <div class="publications-subsection">
-      <h3 class="subsection-title">Journal Papers</h3>
-      <div class="publications-list">
-        <div class="publication-item">
-          <span class="publication-number">[J.2]</span>
-          <h4 class="publication-title">Task-Free Mixture of Agents for Multi-Document Summarization Leveraging LLMs and Knowledge Graphs</h4>
-          <p class="publication-authors">Vuong Tuan-Cuong, Trang Xuan Mai, Van Luong Thien</p>
-          <p class="publication-venue"><em>Neural Computing and Applications</em> (Submitted), 2025</p>
-        </div>
-        
-        <div class="publication-item">
-          <span class="publication-number">[J.1]</span>
-          <h4 class="publication-title">Machine learning-based intrusion detection: feature selection versus feature extraction</h4>
-          <p class="publication-authors">Ngo Vu-Duc, Vuong Tuan-Cuong, Van Luong Thien, Tran Hung</p>
-          <p class="publication-venue"><em>Cluster Computing</em>, pp. 1-15. Springer, 2023</p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Conference Papers -->
-    <div class="publications-subsection">
-      <h3 class="subsection-title">Conference Papers</h3>
-      <div class="publications-list">
-        <div class="publication-item">
-          <span class="publication-number">[C.3]</span>
-          <h4 class="publication-title">Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach</h4>
-          <p class="publication-authors">Vuong Tuan-Cuong, Cong Chi Nguyen, Pham Van-Cuong, Le Thi-Thanh-Huyen, Tran Xuan-Nam, Luong Thien Van</p>
-          <p class="publication-venue">Manuscript accepted for publication in <em>2024 International Symposium on Nonlinear Theory and Its Applications</em>, pp. 798-804, 2024</p>
-        </div>
-        
-        <div class="publication-item">
-          <span class="publication-number">[C.2]</span>
-          <h4 class="publication-title">BERT-VBD: Vietnamese Multi-Document Summarization Framework</h4>
-          <p class="publication-authors">Vuong Tuan-Cuong, Trang Mai Xuan, Luong Thien Van</p>
-          <p class="publication-venue">In <em>CITA 2024: The 13th Conference on Information Technology and its Applications</em>, pp. 1798-1804, 2024</p>
-        </div>
-        
-        <div class="publication-item">
-          <span class="publication-number">[C.1]</span>
-          <h4 class="publication-title">A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems</h4>
-          <p class="publication-authors">Vuong Tuan-Cuong, Tran Hung, Trang Mai Xuan, Ngo Vu-Duc, Luong Thien Van</p>
-          <p class="publication-venue">In <em>2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)</em>, pp. 1798-1804, 2022</p>
-        </div>
-      </div>
-    </div>
-  </section>
+.cv-tabs {
+  display: flex;
+  gap: 10px;
+}
 
-  <!-- Honors and Awards -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-trophy" aria-hidden="true"></i> Honors and Awards
-    </h2>
-    
-    <div class="awards-list">
-      <div class="award-item">
-        <h4>Nominee for Student Best Paper Awards in CITA2024</h4>
-        <p class="award-institution">The 13th Conference on Information Technology and its Applications</p>
-        <p class="award-year">July 2024</p>
-      </div>
-      
-      <div class="award-item">
-        <h4>Viet Nam Informatics Olympiad consolation prize</h4>
-        <p class="award-institution">VietNam Free Opensource Software Association</p>
-        <p class="award-year">December 2023</p>
-      </div>
-      
-      <div class="award-item">
-        <h4>JASSO Scholarship for International Students in Japan</h4>
-        <p class="award-institution">Japan Student Services Organization | JASSO</p>
-        <p class="award-year">February 2023</p>
-      </div>
-      
-      <div class="award-item">
-        <h4>APSIPA Conference Scholarship</h4>
-        <p class="award-institution">Asia Pacific Signal and Information Processing Association Annual Summit and Conference</p>
-        <p class="award-year">December 2022</p>
-      </div>
-      
-      <div class="award-item">
-        <h4>Second Prize in Scientific Research Competition</h4>
-        <p class="award-institution">Phenikaa University</p>
-        <p class="award-year">August 2022</p>
-      </div>
-      
-      <div class="award-item">
-        <h4>First Prize in Scientific Research Competition</h4>
-        <p class="award-institution">Faculty of Computer Science, Phenikaa University</p>
-        <p class="award-year">February 2022</p>
-      </div>
-    </div>
-  </section>
+.tab-btn {
+  padding: 12px 24px;
+  border: none;
+  background: #e9ecef;
+  color: #495057;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-  <!-- Research Experience -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-flask" aria-hidden="true"></i> Research Experience
-    </h2>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker current"></div>
-        <div class="timeline-content">
-          <h3>Research Assistant</h3>
-          <p class="timeline-date">October 2021 – Present</p>
-          <p class="timeline-institution">AIoT Lab - Phenikaa University, Ha Noi, Vietnam</p>
-          <ul class="timeline-achievements">
-            <li>Focus on Agentic AI, self-supervised representation learning, and predictive architectures for multimodal understanding</li>
-            <li>Hands-on experience designing and evaluating multi-agent frameworks in the Multi Document Summarization task</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <h3>Talent Student - Exchange Student</h3>
-          <p class="timeline-date">December 2022 – February 2023</p>
-          <p class="timeline-institution">Shibaura Institute of Technology, Tokyo, Japan</p>
-          <ul class="timeline-achievements">
-            <li>Developed a home-based IoT framework integrating wearable ECG sensors and anomaly-detection agents to detect sudden cardiac arrest in elderly residents</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+.tab-btn:hover {
+  background: #dee2e6;
+  transform: translateY(-1px);
+}
 
-  <!-- Work Experience -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience
-    </h2>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker current"></div>
-        <div class="timeline-content">
-          <h3>Full Time AI Engineer</h3>
-          <p class="timeline-date">April 2024 - Present</p>
-          <p class="timeline-institution">BSM Labs, Ha Noi, Vietnam</p>
-          <div class="project-details">
-            <div class="project-item">
-              <h4>Agentic RAG System for Healthcare:</h4>
-              <ul>
-                <li>Designed and deployed a multi-agent Retrieval-Augmented Generation platform at Hanoi University of Medicine & Pharmacy Hospital for literature search and health advisory</li>
-                <li>Delivered 90% accuracy on hospital datasets and 4.0/5 helpfulness rating in pilot user studies</li>
-              </ul>
-            </div>
-            <div class="project-item">
-              <h4>Enterprise Multi-Agent Collaboration Platform:</h4>
-              <ul>
-                <li>Pilots in multiple departments improved task throughput by 200%</li>
-                <li>Built end-to-end workflow automation using OpenAI-agents, n8n, LangChain, LlamaIndex, and Qdrant</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.tab-btn.active {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
 
-  <!-- Technical Skills Section -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-code" aria-hidden="true"></i> Skills
-    </h2>
-    
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h4>Programming Languages</h4>
-        <div class="skill-tags">
-          <span class="skill-tag proficient">Python</span>
-          <span class="skill-tag proficient">C++</span>
-          <span class="skill-tag proficient">LaTeX</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>LLM & Agents</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">LangChain</span>
-          <span class="skill-tag">OpenAI-agents</span>
-          <span class="skill-tag">LlamaIndex</span>
-          <span class="skill-tag">Qdrant</span>
-          <span class="skill-tag">n8n</span>
-          <span class="skill-tag">Unsloth</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>ML & DL</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">TensorFlow</span>
-          <span class="skill-tag">scikit-learn</span>
-          <span class="skill-tag">Transformers (BERT, GPT)</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>Data & Databases</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Pandas</span>
-          <span class="skill-tag">NumPy</span>
-          <span class="skill-tag">Faiss</span>
-          <span class="skill-tag">ChromaDB</span>
-          <span class="skill-tag">Milvus</span>
-          <span class="skill-tag">Neo4j</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>DevOps & MLOps</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">RunPods</span>
-          <span class="skill-tag">PM2</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>Cloud & Infrastructure</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">GCP</span>
-          <span class="skill-tag">Self-hosted GPU clusters</span>
-        </div>
-      </div>
-    </div>
-  </section>
+.download-cv .btn {
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-  <!-- Teaching Assistantship -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-chalkboard-teacher" aria-hidden="true"></i> Teaching Assistantship
-    </h2>
-    
-    <div class="teaching-list">
-      <div class="teaching-item">
-        <h4>CSE703023: Computer Architecture</h4>
-        <p class="teaching-institution">Phenikaa University</p>
-        <p class="teaching-year">2023</p>
-      </div>
-      
-      <div class="teaching-item">
-        <h4>CSE703041: Introduction to Artificial Intelligence</h4>
-        <p class="teaching-institution">Phenikaa University</p>
-        <p class="teaching-year">2022</p>
-      </div>
-    </div>
-  </section>
+.btn-primary {
+  background: #28a745;
+  color: white;
+  border: none;
+}
 
-  <!-- Professional Activities -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-users" aria-hidden="true"></i> Professional Activities
-    </h2>
-    
-    <div class="activities-list">
-      <div class="activity-item">
-        <h4>Student member of Asia-Pacific Signal and Information Processing Conference</h4>
-        <p class="activity-date">November 2022 - Present</p>
-      </div>
-      
-      <div class="activity-item">
-        <h4>Reviewer, AI & Society, Springer</h4>
-        <p class="activity-date">2025</p>
-      </div>
-      
-      <div class="activity-item">
-        <h4>Reviewer, CITA 2025 – Conference on Information Technology and its Applications</h4>
-        <p class="activity-date">2025</p>
-      </div>
-      
-      <div class="activity-item">
-        <h4>Reviewer, KSE 2023 – International Conference on Knowledge and Systems Engineering</h4>
-        <p class="activity-date">2023</p>
-      </div>
-    </div>
-  </section>
+.btn-primary:hover {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40,167,69,0.3);
+}
 
-  <!-- Languages -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-globe" aria-hidden="true"></i> Additional Information
-    </h2>
-    
-    <div class="additional-info">
-      <p><strong>Languages:</strong> Vietnamese (Native), English (TOEIC - 800)</p>
-    </div>
-  </section>
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+  margin-right: 10px;
+}
 
-  <!-- References -->
-  <section class="cv-section">
-    <h2 class="section-title">
-      <i class="fa fa-address-book" aria-hidden="true"></i> References
-    </h2>
-    
-    <div class="references-grid">
-      <div class="reference-item">
-        <h4>Dr. Thien Van Luong</h4>
-        <p class="reference-title">PhD - Leader of Business AI Lab</p>
-        <p class="reference-institution">Department of Computer Science, National Economics University</p>
-        <p class="reference-contact">Email: thienlv@neu.edu.vn</p>
-        <p class="reference-relationship">Relationship: Supervisor</p>
-      </div>
-      
-      <div class="reference-item">
-        <h4>Dr. Trang Xuan Mai</h4>
-        <p class="reference-title">PhD - Leader of AIoT Lab, Deputy Dean</p>
-        <p class="reference-institution">Department of Computer Science, Phenikaa University</p>
-        <p class="reference-contact">Email: trang.maixuan@phenikaa-uni.edu.vn</p>
-        <p class="reference-relationship">Relationship: Supervisor</p>
-      </div>
-    </div>
-  </section>
+.btn-secondary:hover {
+  background: #5a6268;
+}
 
-  <!-- Footer Note -->
-  <div class="cv-footer">
-    <p><em>For the most current version with complete publication list and additional details, please download the <a href="/files/Tuan_CuongVuong_AI_Research_CV.pdf">full PDF version</a>.</em></p>
-  </div>
-</div>
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* PDF Viewer Styles */
+.pdf-viewer-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pdf-controls {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  gap: 10px;
+}
+
+.pdf-embed-wrapper {
+  position: relative;
+  background: #f5f5f5;
+}
+
+.pdf-fallback {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.pdf-fallback p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+/* Mobile PDF Notice */
+.mobile-pdf-notice {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.notice-content i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.notice-content h4 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.mobile-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-controls {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .cv-tabs {
+    justify-content: center;
+  }
+  
+  .pdf-embed-wrapper iframe {
+    height: 600px;
+  }
+  
+  .pdf-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mobile-pdf-notice {
+    display: block !important;
+  }
+  
+  .pdf-embed-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    padding: 10px;
+  }
+  
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .mobile-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Fullscreen Styles */
+.pdf-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: white;
+}
+
+.pdf-fullscreen iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-fullscreen .pdf-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(248, 249, 250, 0.95);
+  backdrop-filter: blur(10px);
+}
+</style>
+
+<script>
+// Tab switching functionality
+function showTab(tabName) {
+  // Hide all tab contents
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  
+  // Remove active class from all buttons
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  
+  // Show selected tab
+  document.getElementById(tabName + '-tab').classList.add('active');
+  
+  // Add active class to clicked button
+  event.target.classList.add('active');
+  
+  // Analytics tracking (optional)
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'tab_switch', {
+      'event_category': 'CV',
+      'event_label': tabName
+    });
+  }
+}
+
+// Fullscreen functionality
+function toggleFullscreen() {
+  const container = document.querySelector('.pdf-viewer-container');
+  
+  if (container.classList.contains('pdf-fullscreen')) {
+    container.classList.remove('pdf-fullscreen');
+    document.body.style.overflow = 'auto';
+  } else {
+    container.classList.add('pdf-fullscreen');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+// Open PDF in new tab
+function openInNewTab() {
+  window.open('/files/Tuan_CuongVuong_AI_Research_CV.pdf', '_blank');
+  
+  // Analytics tracking
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'pdf_open_new_tab', {
+      'event_category': 'CV',
+      'event_label': 'PDF'
+    });
+  }
+}
+
+// Close fullscreen on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const container = document.querySelector('.pdf-viewer-container');
+    if (container.classList.contains('pdf-fullscreen')) {
+      toggleFullscreen();
+    }
+  }
+});
+
+// Mobile detection and handling
+function handleMobileView() {
+  const isMobile = window.innerWidth <= 768;
+  const mobileNotice = document.querySelector('.mobile-pdf-notice');
+  const pdfWrapper = document.querySelector('.pdf-embed-wrapper');
+  
+  if (isMobile) {
+    mobileNotice.style.display = 'block';
+    pdfWrapper.style.display = 'none';
+  } else {
+    mobileNotice.style.display = 'none';
+    pdfWrapper.style.display = 'block';
+  }
+}
+
+// Run on page load and resize
+window.addEventListener('load', handleMobileView);
+window.addEventListener('resize', handleMobileView);
+
+// PDF load error handling
+document.addEventListener('DOMContentLoaded', function() {
+  const iframe = document.getElementById('pdf-viewer');
+  const fallback = document.querySelector('.pdf-fallback');
+  
+  iframe.addEventListener('error', function() {
+    iframe.style.display = 'none';
+    fallback.style.display = 'block';
+  });
+  
+  // Try to detect if PDF loaded successfully
+  setTimeout(function() {
+    try {
+      if (iframe.contentDocument === null) {
+        // PDF might not be loading, show fallback
+        console.log('PDF viewer might not be supported');
+      }
+    } catch (e) {
+      // Cross-origin or other error, PDF is probably loading fine
+    }
+  }, 3000);
+});
+</script>
+
+<!-- Include Enhanced PDF Viewer Script -->
+<script src="{{ base_path }}/assets/js/cv-pdf-viewer.js"></script>
