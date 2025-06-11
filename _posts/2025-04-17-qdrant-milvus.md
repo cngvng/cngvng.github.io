@@ -8,8 +8,6 @@ tags:
   - Vector Database
 ---
 
-## What is a Vector Database?
-
 Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle **unstructured data like text, images, and audio** much better than regular databases can.
 
 ## Qdrant: What is it?

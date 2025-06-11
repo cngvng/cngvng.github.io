@@ -9,8 +9,6 @@ tags:
   - AI Development
 ---
 
-# My Journey to Becoming an AI Agent Developer
-
 My path to becoming an AI Agent developer began with a foundation in traditional machine learning and evolved through a series of pivotal learning experiences and research projects. Looking back, this journey represents not just a career evolution, but a fundamental shift in how I view the potential of artificial intelligence.
 
 ## The Academic Foundation
