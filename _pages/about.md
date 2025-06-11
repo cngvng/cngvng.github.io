@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Tuan-Cuong Vuong - Computer Science Researcher"
+title: "Tuan-Cuong Vuong"
 author_profile: true
 redirect_from: 
   - /about/
