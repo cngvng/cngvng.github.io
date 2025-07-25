@@ -7,12 +7,67 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="publications">
-  <hr />
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+<div class="publications-page">
+  
+  <!-- Conference Publications Section -->
+  {% if site.data.conference_papers and site.data.conference_papers.size > 0 %}
+    <section class="publications-section conference-publications">
+      {% include publications-by-year.html publications=site.data.conference_papers type="conference" section_title="Conference Publications" %}
+    </section>
+  {% endif %}
+  
+  <!-- Journal Publications Section -->
+  {% if site.data.journal_papers and site.data.journal_papers.size > 0 %}
+    <section class="publications-section journal-publications">
+      {% include publications-by-year.html publications=site.data.journal_papers type="journal" section_title="Journal Publications" %}
+    </section>
+  {% endif %}
+  
+  <!-- Legacy Publications (from _publications collection) - HIDDEN -->
+  {% comment %}
+  {% if site.publications and site.publications.size > 0 %}
+    <section class="publications-section legacy-publications">
+      <div class="publications-section-header">
+        <h2 class="section-title">Other Publications</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <div class="legacy-publication-list">
+        {% for post in site.publications reversed %}
+          {% include archive-single.html %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+  {% endcomment %}
+  
+  <!-- No publications message -->
+  {% unless site.data.conference_papers.size > 0 or site.data.journal_papers.size > 0 or site.publications.size > 0 %}
+    <div class="no-publications-container">
+      <p class="no-publications-message">
+        <i class="fas fa-book-open" aria-hidden="true"></i>
+        Publications will appear here once BibTeX files are populated.
+      </p>
+    </div>
+  {% endunless %}
+  
 </div>
+
+<!-- JavaScript for interactive features -->
+<script>
+function toggleAbstract(key) {
+  const abstractDiv = document.getElementById('abstract-' + key);
+  const button = event.target.closest('.abstract-toggle');
+  
+  if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
+    abstractDiv.style.display = 'block';
+    button.innerHTML = '<i class="fas fa-align-left" aria-hidden="true"></i> Hide Abstract';
+  } else {
+    abstractDiv.style.display = 'none';
+    button.innerHTML = '<i class="fas fa-align-left" aria-hidden="true"></i> Abstract';
+  }
+}
+</script>
 
 
 

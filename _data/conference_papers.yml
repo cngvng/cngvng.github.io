@@ -1,23 +1,22 @@
-- title: "BERT-VBD: A Vietnamese BERT Model for Question Answering in Vietnamese Banking Domain"
-  authors: "Tuan-Cuong Vuong, et al."
-  conference: "Conference on Information Technology and its Applications (CITA 2024)"
-  year: 2024
-  location: "Da Nang, Vietnam"
-  pages: "1-6"
-  url: "https://example.com/cita2024"
+- title: "A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems"
+  authors: "Tuan-Cuong Vuong, Hung Tran, Mai Xuan Trang, Ngo Vu-Duc, Thien Van Luong"
+  journal: "2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)"
+  year: 2022
+  url: "http://apsipa.org/proceedings/2022/APSIPA%202022/ThPM1-6/1570840554.pdf"
+  pages: "1798-1804"
+  publisher: "IEEE"
+  type: "conference"
 
-- title: "UAV-Assisted Communication Networks: Optimization and Performance Analysis"
-  authors: "Tuan-Cuong Vuong, et al."
-  conference: "International Symposium on Nonlinear Theory and Its Applications (NOLTA 2024)"
+- title: "Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach"
+  authors: "Tuan-Cuong Vuong, Cong Chi Nguyen, Van-Cuong Pham, Thi-Thanh-Huyen Le, Xuan-Nam Tran, Thien Van Luong"
+  journal: "arXiv preprint arXiv:2410.02827"
   year: 2024
-  location: "Ha Long, Vietnam"
-  pages: "1-4"
-  url: "https://example.com/nolta2024"
+  url: "https://arxiv.org/abs/2410.02827"
+  type: "preprint"
 
-- title: "Multi-Agent Systems for Intelligent Education Platforms"
-  authors: "Tuan-Cuong Vuong, et al."
-  conference: "International Conference on Artificial Intelligence in Education (AIED 2023)"
-  year: 2023
-  location: "Tokyo, Japan"
-  pages: "234-246"
-  url: "https://example.com/aied2023"
+- title: "BERT-VBD: Vietnamese Multi-Document Summarization Framework"
+  authors: "Tuan-Cuong Vuong, Mai Xuan Trang, Thien Van Luong"
+  journal: "arXiv preprint arXiv:2409.12134"
+  year: 2024
+  url: "https://arxiv.org/abs/2409.12134"
+  type: "preprint"

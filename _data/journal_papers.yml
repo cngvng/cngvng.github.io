@@ -1,13 +1,17 @@
-- title: "BERT-VBD: A Vietnamese BERT Model for Question Answering in Vietnamese Banking Domain"
-  authors: "Tuan-Cuong Vuong, et al."
-  journal: "IEEE Access"
+- title: "Machine learning-based intrusion detection: feature selection versus feature extraction"
+  authors: "Vu-Duc Ngo, Tuan-Cuong Vuong, Thien Van Luong, Hung Tran"
+  journal: "Cluster Computing"
+  volume: 27
+  number: 3
+  pages: "2365–2379"
   year: 2024
-  doi: "10.1109/ACCESS.2024.XXXXXX"
-  url: "https://ieeexplore.ieee.org/document/XXXXXX"
+  publisher: "Springer"
+  type: "journal"
+  url: "https://doi.org/10.1007/s10586-023-04089-5"
 
-- title: "Adaptive Learning Systems Using Multi-Agent Reinforcement Learning"
-  authors: "Tuan-Cuong Vuong, et al."
-  journal: "Journal of Educational Technology & Society"
-  year: 2024
-  doi: "10.30191/ETS.XXXXXX"
-  url: "https://example.com/paper2"
+- title: "A Training-Free Mixture-of-Agents Framework for Multi-Document Summarization using LLMs and Knowledge Graphs"
+  authors: "Tuan-Cuong Vuong, Mai Xuan Trang, Nguyen Tien Cuong, Vu-Duc Ngo, Thien Van Luong"
+  journal: "Neural Computing and Applications"
+  year: 2025
+  status: "Submitted"
+  type: "journal"

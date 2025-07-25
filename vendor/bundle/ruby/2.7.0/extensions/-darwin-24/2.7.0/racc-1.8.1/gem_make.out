@@ -1,0 +1,15 @@
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/cngvng/.rbenv/versions/2.7.0/bin/ruby -I /Users/cngvng/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20250725-30205-a8147a.rb extconf.rb
+creating Makefile
+
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/racc-1.8.1/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250725-30205-1l1a85h/racc

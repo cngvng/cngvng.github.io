@@ -1,0 +1,144 @@
+{% comment %}
+Publication Single Template
+Displays a single publication entry with proper academic formatting
+Supports both conference and journal publications with enhanced citation formatting
+Follows standard academic citation formats (IEEE/ACM style)
+{% endcomment %}
+
+{% assign pub = include.publication %}
+{% assign type = include.type | default: "conference" %}
+
+<div class="publication-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <div class="publication-content">
+    
+    <!-- Academic Citation Format -->
+    <div class="publication-citation">
+      
+      <!-- Authors -->
+      <span class="publication-authors" itemprop="author">
+        {% if pub.authors and pub.authors.size > 0 %}
+          {% for author in pub.authors %}
+            <span class="author">{{ author }}</span>{% unless forloop.last %}{% if forloop.index == pub.authors.size | minus: 1 %} and {% else %}, {% endif %}{% endunless %}
+          {% endfor %}
+        {% else %}
+          <span class="author unknown">Unknown Author</span>
+        {% endif %}.
+      </span>
+      
+      <!-- Title -->
+      <span class="publication-title" itemprop="name">
+        {% if pub.url %}
+          <a href="{{ pub.url }}" target="_blank" rel="noopener" aria-label="Read full paper: {{ pub.title }}">"{{ pub.title }}"</a>
+        {% else %}
+          "{{ pub.title | default: "Untitled" }}"
+        {% endif %}
+      </span>
+      
+      <!-- Publication Details -->
+      <span class="publication-details">
+        {% if type == "conference" %}
+          <!-- Conference Publication Format (IEEE/ACM Style) -->
+          {% if pub.booktitle or pub.conference %}
+            In <em itemprop="isPartOf">{{ pub.booktitle | default: pub.conference }}</em>
+          {% endif %}
+          
+          {% if pub.pages %}
+            {% if pub.booktitle or pub.conference %}, {% endif %}
+            {% if pub.pages contains "--" or pub.pages contains "–" or pub.pages contains "—" %}
+              pp. {{ pub.pages }}
+            {% else %}
+              p. {{ pub.pages }}
+            {% endif %}
+          {% endif %}
+          
+          {% if pub.location %}
+            , {{ pub.location }}
+          {% endif %}
+          
+          {% if pub.organization %}
+            , {{ pub.organization }}
+          {% endif %}
+          
+        {% else %}
+          <!-- Journal Publication Format (IEEE Style) -->
+          {% if pub.journal %}
+            <em itemprop="isPartOf">{{ pub.journal }}</em>
+          {% endif %}
+          
+          {% if pub.volume %}
+            {% if pub.journal %}, {% endif %}vol. {{ pub.volume }}
+          {% endif %}
+          
+          {% if pub.number %}
+            , no. {{ pub.number }}
+          {% endif %}
+          
+          {% if pub.pages %}
+            , {% if pub.pages contains "--" or pub.pages contains "–" or pub.pages contains "—" %}
+              pp. {{ pub.pages }}
+            {% else %}
+              p. {{ pub.pages }}
+            {% endif %}
+          {% endif %}
+          
+          {% if pub.publisher %}
+            , {{ pub.publisher }}
+          {% endif %}
+        {% endif %}
+        
+        <!-- Year -->
+        {% if pub.year and pub.year != 0 %}
+          , <span class="publication-year" itemprop="datePublished">{{ pub.year }}</span>
+        {% else %}
+          , <span class="publication-year unknown">Year Unknown</span>
+        {% endif %}.
+      </span>
+    </div>
+    
+    <!-- Links and Actions -->
+    <div class="publication-links">
+      {% if pub.doi %}
+        <a href="https://doi.org/{{ pub.doi }}" class="publication-link doi-link" target="_blank" rel="noopener">
+          <i class="ai ai-doi" aria-hidden="true"></i> DOI
+        </a>
+      {% endif %}
+      
+      {% if pub.url %}
+        <a href="{{ pub.url }}" class="publication-link url-link" target="_blank" rel="noopener">
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i> Paper
+        </a>
+      {% endif %}
+      
+      {% if pub.abstract %}
+        <button class="publication-link abstract-toggle" onclick="toggleAbstract('{{ pub.key }}')">
+          <i class="fas fa-align-left" aria-hidden="true"></i> Abstract
+        </button>
+      {% endif %}
+    </div>
+    
+    <!-- Abstract (collapsible) -->
+    {% if pub.abstract %}
+      <div id="abstract-{{ pub.key }}" class="publication-abstract" style="display: none;">
+        <p><strong>Abstract:</strong> {{ pub.abstract }}</p>
+      </div>
+    {% endif %}
+    
+    <!-- Keywords -->
+    {% if pub.keywords %}
+      <div class="publication-keywords">
+        <strong>Keywords:</strong>
+        {% for keyword in pub.keywords %}
+          <span class="keyword">{{ keyword }}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    <!-- Note -->
+    {% if pub.note %}
+      <div class="publication-note">
+        <em>{{ pub.note }}</em>
+      </div>
+    {% endif %}
+    
+  </div>
+</div>

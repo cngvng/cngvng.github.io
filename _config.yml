@@ -82,6 +82,76 @@ publication_category:
   conferences:
     title: 'Conference Papers'
 
+# Academic Theme Configuration
+academic_theme:
+  # Black theme color scheme
+  colors:
+    primary: "#0a0a0a"        # Near black background
+    text: "#e8e8e8"           # Light gray text
+    accent: "#2c5aa0"         # Academic blue accent
+    secondary: "#1a1a1a"      # Dark gray secondary
+    tertiary: "#2a2a2a"       # Lighter dark gray
+    border: "#333333"         # Border color
+    code_bg: "#1e1e1e"        # Code background
+    text_muted: "#b8b8b8"     # Muted text color
+    success: "#4caf50"        # Success color (dark theme adjusted)
+    warning: "#ff9800"        # Warning color (dark theme adjusted)
+    danger: "#f44336"         # Danger color (dark theme adjusted)
+  
+  # Publication management
+  publications:
+    conferences_bib: "_data/conferences.bib"
+    journals_bib: "_data/journals.bib"
+    auto_generate: true
+    citation_style: "academic"
+    group_by_year: true
+    show_abstracts: false
+    show_bibtex: true
+    show_links: true
+  
+  # Thumbnail and preview settings
+  thumbnails:
+    default_size: "300x200"
+    quality: 85
+    fallback: "/images/default-thumbnail.jpg"
+    extract_from_content: true
+    generate_webp: true
+    lazy_loading: true
+  
+  # Typography settings
+  typography:
+    header_font: "serif"      # Professional serif for headings
+    body_font: "sans-serif"   # Clean sans-serif for body
+    code_font: "monospace"    # Monospace for code
+    base_font_size: "16px"
+    line_height: 1.6
+  
+  # Layout and design
+  layout:
+    sidebar_width: "300px"
+    content_max_width: "1200px"
+    grid_columns: 12
+    card_border_radius: "8px"
+    box_shadow: "0 2px 8px rgba(0, 0, 0, 0.3)"
+    responsive_breakpoints:
+      mobile: "768px"
+      tablet: "1024px"
+      desktop: "1200px"
+  
+  # Navigation and UX
+  navigation:
+    sticky_header: true
+    smooth_scroll: true
+    highlight_active: true
+    mobile_breakpoint: "768px"
+  
+  # Performance and optimization
+  performance:
+    minify_css: true
+    minify_js: true
+    optimize_images: true
+    enable_caching: true
+
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
