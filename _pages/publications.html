@@ -9,13 +9,6 @@ author_profile: true
 
 <div class="publications-page">
   
-  <!-- Conference Publications Section -->
-  {% if site.data.conference_papers and site.data.conference_papers.size > 0 %}
-    <section class="publications-section conference-publications">
-      {% include publications-by-year.html publications=site.data.conference_papers type="conference" section_title="Conference Publications" %}
-    </section>
-  {% endif %}
-  
   <!-- Journal Publications Section -->
   {% if site.data.journal_papers and site.data.journal_papers.size > 0 %}
     <section class="publications-section journal-publications">
@@ -23,48 +16,115 @@ author_profile: true
     </section>
   {% endif %}
   
-  <!-- Legacy Publications (from _publications collection) - HIDDEN -->
-  {% comment %}
-  {% if site.publications and site.publications.size > 0 %}
-    <section class="publications-section legacy-publications">
-      <div class="publications-section-header">
-        <h2 class="section-title">Other Publications</h2>
-        <div class="section-divider"></div>
-      </div>
-      
-      <div class="legacy-publication-list">
-        {% for post in site.publications reversed %}
-          {% include archive-single.html %}
-        {% endfor %}
-      </div>
+  <!-- Conference Publications Section -->
+  {% if site.data.conference_papers and site.data.conference_papers.size > 0 %}
+    <section class="publications-section conference-publications">
+      {% include publications-by-year.html publications=site.data.conference_papers type="conference" section_title="Conference Publications" %}
     </section>
   {% endif %}
-  {% endcomment %}
   
   <!-- No publications message -->
-  {% unless site.data.conference_papers.size > 0 or site.data.journal_papers.size > 0 or site.publications.size > 0 %}
+  {% unless site.data.conference_papers.size > 0 or site.data.journal_papers.size > 0 %}
     <div class="no-publications-container">
       <p class="no-publications-message">
         <i class="fas fa-book-open" aria-hidden="true"></i>
-        Publications will appear here once BibTeX files are populated.
+        Publications will appear here once data files are populated.
       </p>
     </div>
   {% endunless %}
-  
+
 </div>
 
-<!-- JavaScript for interactive features -->
+<!-- Optimized performance script -->
 <script>
-function toggleAbstract(key) {
-  const abstractDiv = document.getElementById('abstract-' + key);
-  const button = event.target.closest('.abstract-toggle');
+// Performance-optimized publication interactions
+(function() {
+  'use strict';
   
-  if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
-    abstractDiv.style.display = 'block';
-    button.innerHTML = '<i class="fas fa-align-left" aria-hidden="true"></i> Hide Abstract';
+  // Use requestAnimationFrame for smooth animations
+  function smoothTransform(element, property, value) {
+    if (window.requestAnimationFrame) {
+      requestAnimationFrame(function() {
+        element.style[property] = value;
+      });
+    } else {
+      element.style[property] = value;
+    }
+  }
+  
+  // Debounced scroll handler
+  let scrollTimer = null;
+  function handleScroll() {
+    if (scrollTimer !== null) {
+      clearTimeout(scrollTimer);
+    }
+    scrollTimer = setTimeout(function() {
+      // Scroll-based optimizations
+      const scrollY = window.pageYOffset;
+      document.body.classList.toggle('scrolled', scrollY > 100);
+    }, 10);
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    abstractDiv.style.display = 'none';
-    button.innerHTML = '<i class="fas fa-align-left" aria-hidden="true"></i> Abstract';
+    init();
+  }
+  
+  function init() {
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Lazy load publication items
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '50px' });
+      
+      document.querySelectorAll('.publication-item').forEach(function(item) {
+        observer.observe(item);
+      });
+    } else {
+      // Fallback for older browsers
+      document.querySelectorAll('.publication-item').forEach(function(item) {
+        item.classList.add('loaded');
+      });
+    }
+    
+    // Optimize keyword hover effects
+    document.querySelectorAll('.keyword').forEach(function(keyword) {
+      keyword.addEventListener('mouseenter', function() {
+        smoothTransform(this, 'transform', 'translate3d(0, -1px, 0)');
+      });
+      
+      keyword.addEventListener('mouseleave', function() {
+        smoothTransform(this, 'transform', 'translate3d(0, 0, 0)');
+      });
+    });
+  }
+})();
+</script>
+
+<!-- SEO structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Publications",
+  "description": "Academic publications and research papers by {{ site.author.name }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ site.data.conference_papers.size | plus: site.data.journal_papers.size | default: 0 }}
   }
 }
 </script>

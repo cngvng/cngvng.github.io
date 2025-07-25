@@ -1,0 +1,118 @@
+# =============================================================================
+# CONFERENCE PUBLICATIONS YAML TEMPLATE  
+# =============================================================================
+# Use this template for conference publications
+# Copy this structure and fill in your publication details
+
+# COMPLETE CONFERENCE PUBLICATION EXAMPLE
+- title: "A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems"
+  authors: 
+    - "Tuan-Cuong Vuong"
+    - "Hung Tran"
+    - "Mai Xuan Trang"
+    - "Ngo Vu-Duc"
+    - "Thien Van Luong"
+  conference: "2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference"
+  conference_short: "APSIPA ASC 2022"  # Optional: short conference name
+  booktitle: "2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)"
+  pages: "1798–1804"
+  year: 2022
+  month: 11  # Optional: month of conference (1-12)
+  location: "Chiang Mai, Thailand"  # Optional: conference location
+  publisher: "IEEE"
+  doi: "10.23919/APSIPAASC55919.2022.9980141"  # Optional but recommended
+  url: "http://apsipa.org/proceedings/2022/APSIPA%202022/ThPM1-6/1570840554.pdf"
+  pdf: "/files/papers/conference_2022_feature_comparison.pdf"  # Optional: local PDF
+  slides: "/files/slides/apsipa_2022_slides.pdf"  # Optional: presentation slides
+  poster: "/files/posters/apsipa_2022_poster.pdf"  # Optional: poster
+  code: "https://github.com/username/feature-comparison"  # Optional: code repository
+  dataset: "https://example.com/dataset"  # Optional: dataset
+  type: "conference"
+  conference_type: "international"  # international | national | workshop
+  peer_reviewed: true
+  acceptance_rate: "45%"  # Optional: conference acceptance rate
+  core_ranking: "B"  # Optional: CORE ranking (A*, A, B, C)
+  h5_index: 15  # Optional: Google Scholar h5-index
+  citations: 8  # Optional: citation count
+  awards:  # Optional: any awards received
+    - "Best Paper Award"
+    - "Outstanding Presentation"
+  abstract: |  # Optional: paper abstract
+    This paper presents a comprehensive comparison between feature selection 
+    and feature extraction techniques in the context of network intrusion detection...
+  keywords:
+    - "Feature Selection"
+    - "Feature Extraction" 
+    - "Network Security"
+    - "Intrusion Detection"
+  bibtex: |  # Optional: BibTeX entry
+    @inproceedings{vuong2022comparison,
+      title={A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems},
+      author={Vuong, Tuan-Cuong and Tran, Hung and Trang, Mai Xuan and Ngo, Vu-Duc and Van Luong, Thien},
+      booktitle={2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
+      pages={1798--1804},
+      year={2022},
+      organization={IEEE}
+    }
+
+# ARXIV/PREPRINT EXAMPLE  
+- title: "Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach"
+  authors: 
+    - "Tuan-Cuong Vuong"
+    - "Cong Chi Nguyen" 
+    - "Van-Cuong Pham"
+    - "Thi-Thanh-Huyen Le"
+    - "Xuan-Nam Tran"
+    - "Thien Van Luong"
+  conference: "arXiv preprint"
+  year: 2024
+  month: 10
+  arxiv_id: "2410.02827"  # arXiv identifier
+  url: "https://arxiv.org/abs/2410.02827"
+  pdf: "https://arxiv.org/pdf/2410.02827.pdf"
+  type: "preprint"
+  status: "submitted"  # submitted to a conference/journal
+  target_venue: "IEEE Transactions on Vehicular Technology"  # Optional: target publication
+  abstract: |
+    This paper proposes an effective intrusion detection system for UAV 
+    communications using autoencoder-based feature extraction...
+  keywords:
+    - "UAV Security"
+    - "Autoencoder" 
+    - "Machine Learning"
+    - "Intrusion Detection"
+
+# WORKSHOP PAPER EXAMPLE
+- title: "BERT-VBD: Vietnamese Multi-Document Summarization Framework"
+  authors: 
+    - "Tuan-Cuong Vuong"
+    - "Mai Xuan Trang"
+    - "Thien Van Luong"
+  conference: "Workshop on Natural Language Processing for Low-Resource Languages"
+  conference_short: "NLP4LRL 2024"
+  booktitle: "Proceedings of the Workshop on Natural Language Processing for Low-Resource Languages"
+  year: 2024
+  month: 6
+  location: "Bangkok, Thailand"
+  type: "workshop"
+  conference_type: "international"
+  url: "https://arxiv.org/abs/2409.12134"
+  pdf: "https://arxiv.org/pdf/2409.12134.pdf"
+  code: "https://github.com/username/bert-vbd"
+  abstract: |
+    We present BERT-VBD, a framework for Vietnamese multi-document 
+    summarization that leverages BERT-based architectures...
+  keywords:
+    - "Vietnamese NLP"
+    - "Multi-Document Summarization"
+    - "BERT"
+    - "Low-Resource Languages"
+
+# MINIMAL CONFERENCE ENTRY (required fields only)
+- title: "Your Conference Paper Title"
+  authors: 
+    - "First Author"
+    - "Second Author"
+  conference: "Conference Name"
+  year: 2024
+  type: "conference"

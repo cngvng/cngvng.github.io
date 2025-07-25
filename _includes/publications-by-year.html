@@ -59,7 +59,7 @@ Handles missing years and provides proper academic chronological ordering
       <!-- Publications for this year -->
       <div class="year-publications">
         {% for publication in sorted_publications %}
-          {% include publication-single.html publication=publication type=type %}
+          {% include publication-single.html post=publication type=type %}
         {% endfor %}
       </div>
     </div>
@@ -85,7 +85,7 @@ Handles missing years and provides proper academic chronological ordering
       
       <div class="year-publications">
         {% for publication in sorted_publications %}
-          {% include publication-single.html publication=publication type=type %}
+          {% include publication-single.html post=publication type=type %}
         {% endfor %}
       </div>
     </div>

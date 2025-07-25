@@ -1,0 +1,81 @@
+# =============================================================================
+# JOURNAL PUBLICATIONS YAML TEMPLATE
+# =============================================================================
+# Use this template for journal publications
+# Copy this structure and fill in your publication details
+
+# COMPLETE JOURNAL PUBLICATION EXAMPLE
+- title: "Machine learning-based intrusion detection: feature selection versus feature extraction"
+  authors: 
+    - "Vu-Duc Ngo"
+    - "Tuan-Cuong Vuong" 
+    - "Thien Van Luong"
+    - "Hung Tran"
+  journal: "Cluster Computing"
+  volume: 27
+  number: 3
+  pages: "2365–2379"
+  year: 2024
+  month: 3  # Optional: month of publication (1-12)
+  publisher: "Springer"
+  doi: "10.1007/s10586-023-04089-5"  # Optional but recommended
+  url: "https://doi.org/10.1007/s10586-023-04089-5"
+  pdf: "/files/papers/journal_2024_ml_intrusion.pdf"  # Optional: local PDF file
+  code: "https://github.com/username/repo"  # Optional: code repository
+  dataset: "https://example.com/dataset"  # Optional: dataset link
+  type: "journal"
+  status: "published"  # published | accepted | submitted | under-review
+  impact_factor: 3.458  # Optional: journal impact factor
+  quartile: "Q2"  # Optional: journal quartile (Q1, Q2, Q3, Q4)
+  citations: 15  # Optional: citation count
+  abstract: |  # Optional: paper abstract
+    This paper presents a comprehensive comparison of feature selection 
+    and feature extraction techniques for network intrusion detection systems...
+  keywords:
+    - "Machine Learning"
+    - "Intrusion Detection"
+    - "Feature Selection"
+    - "Network Security"
+  bibtex: |  # Optional: BibTeX entry
+    @article{ngo2024machine,
+      title={Machine learning-based intrusion detection: feature selection versus feature extraction},
+      author={Ngo, Vu-Duc and Vuong, Tuan-Cuong and Van Luong, Thien and Tran, Hung},
+      journal={Cluster Computing},
+      volume={27},
+      number={3},
+      pages={2365--2379},
+      year={2024},
+      publisher={Springer}
+    }
+
+# SUBMITTED/UNDER REVIEW JOURNAL EXAMPLE
+- title: "A Training-Free Mixture-of-Agents Framework for Multi-Document Summarization using LLMs and Knowledge Graphs"
+  authors: 
+    - "Tuan-Cuong Vuong"
+    - "Mai Xuan Trang"
+    - "Nguyen Tien Cuong"
+    - "Vu-Duc Ngo"
+    - "Thien Van Luong"
+  journal: "Neural Computing and Applications"
+  year: 2025
+  status: "submitted"  # or "under-review", "accepted"
+  type: "journal"
+  submission_date: "2024-12-15"  # Optional: submission date
+  abstract: |
+    This work presents a novel training-free framework for multi-document 
+    summarization that leverages mixture-of-agents and knowledge graphs...
+  keywords:
+    - "Large Language Models"
+    - "Multi-Document Summarization"
+    - "Knowledge Graphs"
+    - "Mixture of Agents"
+
+# MINIMAL JOURNAL ENTRY (required fields only)
+- title: "Your Journal Paper Title"
+  authors: 
+    - "First Author"
+    - "Second Author"
+  journal: "Journal Name"
+  year: 2024
+  type: "journal"
+  status: "published"

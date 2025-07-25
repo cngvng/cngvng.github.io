@@ -1,22 +1,56 @@
 - title: "A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems"
-  authors: "Tuan-Cuong Vuong, Hung Tran, Mai Xuan Trang, Ngo Vu-Duc, Thien Van Luong"
-  journal: "2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)"
+  authors:
+    - "Tuan-Cuong Vuong"
+    - "Hung Tran"
+    - "Mai Xuan Trang"
+    - "Ngo Vu-Duc"
+    - "Thien Van Luong"
+  highlight_authors:
+    - "Tuan-Cuong Vuong"
+  conference: "2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)"
   year: 2022
-  url: "http://apsipa.org/proceedings/2022/APSIPA%202022/ThPM1-6/1570840554.pdf"
   pages: "1798-1804"
+  doi: "10.23919/APSIPAASC55919.2022.9979923"
+  url: "https://doi.org/10.23919/APSIPAASC55919.2022.9979923"
   publisher: "IEEE"
   type: "conference"
+  status: "published"
+  keywords:
+    - "feature selection"
+    - "feature extraction" 
+    - "machine learning"
 
 - title: "Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach"
-  authors: "Tuan-Cuong Vuong, Cong Chi Nguyen, Van-Cuong Pham, Thi-Thanh-Huyen Le, Xuan-Nam Tran, Thien Van Luong"
-  journal: "arXiv preprint arXiv:2410.02827"
+  authors:
+    - "Tuan-Cuong Vuong"
+    - "Cong Chi Nguyen"
+    - "Van-Cuong Pham"
+    - "Thi-Thanh-Huyen Le"
+    - "Xuan-Nam Tran"
+    - "Thien Van Luong"
+  highlight_authors:
+    - "Tuan-Cuong Vuong"
+  conference: "The 2024 International Symposium on Nonlinear Theory and Its Applications (NOLTA2024)"
   year: 2024
-  url: "https://arxiv.org/abs/2410.02827"
-  type: "preprint"
+  pages: "320-325"
+  doi: "10.48550/arXiv.2410.02827"
+  url: "https://doi.org/10.48550/arXiv.2410.02827"
+  publisher: "NOLTA SOCIETY"
+  type: "conference"
+  status: "published"
 
 - title: "BERT-VBD: Vietnamese Multi-Document Summarization Framework"
-  authors: "Tuan-Cuong Vuong, Mai Xuan Trang, Thien Van Luong"
-  journal: "arXiv preprint arXiv:2409.12134"
+  authors:
+    - "Tuan-Cuong Vuong"
+    - "Mai Xuan Trang"
+    - "Thien Van Luong"
+  highlight_authors:
+    - "Tuan-Cuong Vuong"
+  conference: "Proceedings of the 13th International Conference on Information Technology and Its Applications (CITA 2024)"
   year: 2024
-  url: "https://arxiv.org/abs/2409.12134"
-  type: "preprint"
+  pages: "1-6"
+  doi: "10.48550/arXiv.2409.12134"
+  url: "https://doi.org/10.48550/arXiv.2409.12134"
+  publisher: "Springer"
+  type: "conference"
+  status: "published"
