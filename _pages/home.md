@@ -24,7 +24,7 @@ classes: wide
 </div>
 
 <div class="objective-action" class="text-center mb-4">
-    <a href="mailto:cngvng123@gmail.com" class="btn btn-primary">Contact Me</a>
+    <a href="mailto:cngvng.work@gmail.com" class="btn btn-primary">Contact Me</a>
   </div>
 
 ## Current Research Focus
@@ -183,6 +183,6 @@ classes: wide
 <div class="text-center">
   <p class="text-muted">
     Interested in collaboration or have questions about my research? 
-    <a href="mailto:cngvng123@gmail.com">Get in touch!</a>
+    <a href="mailto:cngvng.work@gmail.com">Get in touch!</a>
   </p>
 </div>
