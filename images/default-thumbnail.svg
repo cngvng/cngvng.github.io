@@ -1,8 +1,0 @@
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="300" height="200" fill="#1a1a1a"/>
-  <rect x="10" y="10" width="280" height="180" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="150" y="90" font-family="Arial, sans-serif" font-size="16" fill="#b8b8b8" text-anchor="middle">Academic Content</text>
-  <text x="150" y="110" font-family="Arial, sans-serif" font-size="14" fill="#666666" text-anchor="middle">Preview Thumbnail</text>
-  <circle cx="150" cy="140" r="20" fill="none" stroke="#2c5aa0" stroke-width="2"/>
-  <path d="M140 140 L150 150 L160 130" stroke="#2c5aa0" stroke-width="2" fill="none"/>
-</svg>

@@ -1,31 +1,48 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="{{ site.locale | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{% include base_path %}
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <body>
+  {% seo %}
+  {% feed_meta %}
+</head>
+<body>
+  <div class="site-wrapper">
+    {% include sidebar.html %}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <main class="main-content" id="main-content">
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
 
-    {{ content }}
+      {{ content }}
+    </main>
+  </div>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+  <script>
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
 
-    {% include scripts.html %}
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      sidebar.classList.toggle('is-open');
+      document.body.classList.toggle('menu-open');
+    });
 
-  </body>
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        sidebar.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  </script>
+</body>
 </html>

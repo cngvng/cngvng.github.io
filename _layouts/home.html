@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero-content">
+    {% if page.portrait %}
+    <img src="{{ page.portrait | relative_url }}" alt="{{ site.owner_name }}" class="hero-portrait">
+    {% endif %}
+
+    <h1 class="hero-name">{{ site.owner_name }}</h1>
+    <p class="hero-title">{{ site.description }}</p>
+    <p class="hero-location">{{ site.owner_affiliation }}</p>
+
+    <div class="hero-banner">
+      <strong>Seeking a PhD position</strong>
+    </div>
+
+    <div class="hero-actions">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn-primary">Publications</a>
+      <a href="{{ '/assets/cv/cv.pdf' | relative_url }}" class="btn btn-secondary" download>Download CV</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    {% if page.intro %}
+    <div class="intro">
+      {{ page.intro | markdownify }}
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </div>
+</section>
+
+{% if page.timeline %}
+<section class="section section-gray">
+  <div class="container">
+    <h2>Timeline</h2>
+    <ul class="timeline">
+      {% for item in page.timeline %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <h2>Recent Research</h2>
+    <div class="publications-list">
+      {% assign sorted_pubs = site.publications | sort: 'year' | reverse %}
+      {% for pub in sorted_pubs limit:3 %}
+      <article class="pub-card">
+        <h3 class="pub-title">
+          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </h3>
+        <p class="pub-authors">
+          {% for author in pub.authors %}
+            {% if author == site.owner_name %}
+              <span class="me">{{ author }}</span>
+            {% else %}
+              {{ author }}
+            {% endif %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+        <p class="pub-venue">{{ pub.venue }} ({{ pub.year }})</p>
+        {% if pub.abstract %}
+        <p class="pub-abstract">{{ pub.abstract | truncate: 200 }}</p>
+        {% endif %}
+        <div class="pub-links">
+          {% if pub.pdf %}<a href="{{ pub.pdf | relative_url }}" class="pub-link">PDF</a>{% endif %}
+          {% if pub.doi %}<a href="{{ pub.doi }}" class="pub-link">DOI</a>{% endif %}
+          {% if pub.code %}<a href="{{ pub.code }}" class="pub-link">Code</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="text-center">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn-secondary">View All Publications</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="container">
+    <h2>Research Interests</h2>
+    <div class="interests">
+      {% for interest in site.data.interests %}
+      <span class="badge">{{ interest }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,416 +1,61 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
-
-# Basic Site Settings
-locale                   : "en-US"
-title                    : "Tuan-Cuong Vuong"
-title_separator          : "-"
-name                     : &name "Cuong Vuong"
-description              : &description "AI Researcher | Developer | AI Enthusiast"
-url                      : https://cngvng.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "cngvng/cngvng.github.io"
-
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
-author:
-  # Biographic information
-  avatar           : "profile.png"
-  name             : "Tuan-Cuong Vuong"
-  pronouns         : # example: "she/her"  
-  bio              : "AI Researcher | Developer | AI Enthusiast"
-  location         : "Vietnam"
-  employer         : "Phenikaa University"
-  uri              : # URL
-  email            : "cngvng.work@gmail.com" 
-
-  # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=GJuxF5QAAAAJ&hl=en"
-  impactstory      : # URL
-  orcid            : "https://orcid.org/0000-0002-0999-1950"
-  semantic         : # URL
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
-
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
-  github           : "cngvng"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
-
-  # Social media
-  bluesky          : # Username 
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # cng.vng
-  lastfm           : # Username
-  linkedin         : cng-vng
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : cngvng413
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # URL
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
-# Academic Theme Configuration
-academic_theme:
-  # Black theme color scheme
-  colors:
-    primary: "#0a0a0a"        # Near black background
-    text: "#e8e8e8"           # Light gray text
-    accent: "#2c5aa0"         # Academic blue accent
-    secondary: "#1a1a1a"      # Dark gray secondary
-    tertiary: "#2a2a2a"       # Lighter dark gray
-    border: "#333333"         # Border color
-    code_bg: "#1e1e1e"        # Code background
-    text_muted: "#b8b8b8"     # Muted text color
-    success: "#4caf50"        # Success color (dark theme adjusted)
-    warning: "#ff9800"        # Warning color (dark theme adjusted)
-    danger: "#f44336"         # Danger color (dark theme adjusted)
-  
-  # Publication management
-  publications:
-    conferences_bib: "_data/conferences.bib"
-    journals_bib: "_data/journals.bib"
-    auto_generate: true
-    citation_style: "academic"
-    group_by_year: true
-    show_abstracts: false
-    show_bibtex: true
-    show_links: true
-  
-  # Thumbnail and preview settings
-  thumbnails:
-    default_size: "300x200"
-    quality: 85
-    fallback: "/images/default-thumbnail.jpg"
-    extract_from_content: true
-    generate_webp: true
-    lazy_loading: true
-  
-  # Typography settings
-  typography:
-    header_font: "serif"      # Professional serif for headings
-    body_font: "sans-serif"   # Clean sans-serif for body
-    code_font: "monospace"    # Monospace for code
-    base_font_size: "16px"
-    line_height: 1.6
-  
-  # Layout and design
-  layout:
-    sidebar_width: "300px"
-    content_max_width: "1200px"
-    grid_columns: 12
-    card_border_radius: "8px"
-    box_shadow: "0 2px 8px rgba(0, 0, 0, 0.3)"
-    responsive_breakpoints:
-      mobile: "768px"
-      tablet: "1024px"
-      desktop: "1200px"
-  
-  # Navigation and UX
-  navigation:
-    sticky_header: true
-    smooth_scroll: true
-    highlight_active: true
-    mobile_breakpoint: "768px"
-  
-  # Performance and optimization
-  performance:
-    minify_css: true
-    minify_js: true
-    optimize_images: true
-    enable_caching: true
-
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+title: "Tuan-Cuong Vuong — AI Research"
+description: "AI Researcher | Research Assistant"
+url: "https://cngvng.github.io"
+baseurl: ""
+locale: "en-US"
 
+# Owner Information
+owner_name: "Tuan-Cuong Vuong"
+owner_affiliation: "Phenikaa University, Vietnam"
+owner_email: "cngvng.work@gmail.com"
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
+# Social Links
+socials:
+  scholar: "https://scholar.google.com/citations?user=GJuxF5QAAAAJ&hl=en"
+  orcid: "https://orcid.org/0000-0002-0999-1950"
+  github: "https://github.com/cngvng"
+  linkedin: "https://www.linkedin.com/in/cng-vng"
+  x: "https://x.com/cngvng413"
+  university: "https://phenikaa-uni.edu.vn"
 
+# Build Settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
 
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+# Pagination
+paginate: 8
+paginate_path: "/blog/page:num/"
 
-
-# Analytics
-analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
-
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-
-# These settings control the types of collections used by the template
+# Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+    permalink: /publications/:name/
 
-
-# These settings control how pages and collections are included in the site
+# Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
+      type: "publications"
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+      layout: "publication"
   - scope:
       path: ""
-      type: pages
+      type: "posts"
     values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: "post"
 
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-redirect-from
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - _site
+  - README.md

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Qdrant vs Milvus: Which Vector Database is Right for You? | Tuan-Cuong Vuong — AI Research</title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Qdrant vs Milvus: Which Vector Database is Right for You? | Tuan-Cuong Vuong — AI Research</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Qdrant vs Milvus: Which Vector Database is Right for You?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle unstructured data like text, images, and audio much better than regular databases can." />
+<meta property="og:description" content="Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle unstructured data like text, images, and audio much better than regular databases can." />
+<link rel="canonical" href="http://localhost:4000/2025/04/17/qdrant-milvus.html" />
+<meta property="og:url" content="http://localhost:4000/2025/04/17/qdrant-milvus.html" />
+<meta property="og:site_name" content="Tuan-Cuong Vuong — AI Research" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-17T10:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Qdrant vs Milvus: Which Vector Database is Right for You?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-17T10:00:00+07:00","datePublished":"2025-04-17T10:00:00+07:00","description":"Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle unstructured data like text, images, and audio much better than regular databases can.","headline":"Qdrant vs Milvus: Which Vector Database is Right for You?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/04/17/qdrant-milvus.html"},"url":"http://localhost:4000/2025/04/17/qdrant-milvus.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tuan-Cuong Vuong — AI Research" />
+</head>
+<body>
+  <div class="site-wrapper">
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-title">
+      Tuan-Cuong Vuong
+    </a>
+    <p class="sidebar-subtitle">AI Researcher | Research Assistant</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li>
+        <a href="/" >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+          </svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/publications/" >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+          </svg>
+          Publications
+        </a>
+      </li>
+      <li>
+        <a href="/blog/" >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/cv/" >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+            <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
+          </svg>
+          Curriculum Vitae
+        </a>
+      </li>
+      <li>
+        <a href="/contact/" >
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+          </svg>
+          Contact & Office Hours
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="social-links">
+      
+      <a href="https://scholar.google.com/citations?user=GJuxF5QAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 0zm6.5 14.18L12 17.18l-6.5-3V9.27L12 12l6.5-2.73v5.91z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://github.com/cngvng" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://www.linkedin.com/in/cng-vng" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://x.com/cngvng413" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+        </svg>
+      </a>
+      
+
+      
+      <a href="https://orcid.org/0000-0002-0999-1950" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 4.078-1.784 4.078-3.722 0-2.025-1.587-3.722-4.078-3.722h-2.297z"/>
+        </svg>
+      </a>
+      
+    </div>
+  </div>
+</aside>
+
+
+    <main class="main-content" id="main-content">
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <div class="page-header">
+  <div class="container">
+    <h1>Qdrant vs Milvus: Which Vector Database is Right for You?</h1>
+    <p class="post-meta">
+      <time datetime="2025-04-17T10:00:00+07:00">April 17, 2025</time>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <article class="post-content">
+    <p>Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle <strong>unstructured data like text, images, and audio</strong> much better than regular databases can.</p>
+
+<h2 id="qdrant-what-is-it">Qdrant: What is it?</h2>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img0.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p>Qdrant is an open-source, cloud-native vector database. It powers search engines, recommendation systems, and machine learning models that need to find similar items quickly.</p>
+
+<h3 id="key-features-of-qdrant-vector-database">Key Features of Qdrant Vector Database</h3>
+
+<ul>
+  <li><strong>Advanced Similarity Search</strong>: Qdrant offers multiple ways to compare vectors (dot product, cosine similarity, Euclidean distance, Manhattan distance). You can attach extra JSON data (called “payload”) to each vector.</li>
+  <li><strong>Built Using Rust</strong>: Qdrant is powered by Rust, making it extremely fast and memory-safe without needing garbage collection. It’s as fast as C/C++ with fewer bugs.</li>
+  <li><strong>Easy Scaling</strong>: Qdrant grows with your needs - both up (vertical) and out (horizontal). It uses the Raft protocol for clusters with replicas and shards, handling huge datasets without problems. You can create partitions within a single collection using payload.</li>
+  <li><strong>Powerful Filtering</strong>: Beyond storing JSON with vectors, Qdrant lets you filter results using keywords, full-text search, number ranges, nested filters, and even location-based searches.</li>
+  <li><strong>Hybrid Search</strong>: Qdrant works with both dense and sparse vectors. Sparse vectors (mostly zeros) help find exact keyword matches while dense vectors find semantically similar results. Combining them gives you the best of both worlds.</li>
+  <li><strong>Smart Compression</strong>: Qdrant offers three ways to shrink vector size: scalar quantization (balances accuracy and speed), binary quantization (fastest, smallest), and product quantization (highest compression for limited memory).</li>
+  <li><strong>Flexible Deployment</strong>: Run Qdrant locally with Docker (free), use the managed Qdrant Cloud service (scalable, easy setup), or choose Hybrid Cloud to connect your own systems with their managed service.</li>
+</ul>
+
+<h2 id="milvus-what-is-it">Milvus: What is it?</h2>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img1.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p>Milvus is an open-source vector database built to handle massive amounts of vector data. It’s extremely scalable and fast, supporting many different ways to search for similar vectors.</p>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img2.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<ul>
+  <li><strong>Milvus Lite</strong>: A simple Python library you can add to your apps. Perfect for quick tests in Jupyter Notebooks or small devices with limited resources.</li>
+  <li><strong>Milvus Standalone</strong>: Everything packed into one Docker image for easy setup on a single machine.</li>
+  <li><strong>Milvus Distributed</strong>: Runs on Kubernetes clusters with a cloud-native design that can handle billions of vectors. Critical parts have backups to prevent failures.</li>
+</ul>
+
+<h3 id="what-makes-milvus-so-fast">What Makes Milvus so Fast?</h3>
+
+<ul>
+  <li><strong>Hardware Optimization</strong>: Milvus is tuned for many different hardware setups including AVX512, SIMD, GPUs, and NVMe SSDs to get maximum speed everywhere.</li>
+  <li><strong>Superior Search Algorithms</strong>: Supports many search methods (IVF, HNSW, DiskANN, etc.) that have been heavily optimized. Milvus is <strong>30%-70% faster</strong> than popular alternatives like FAISS and HNSWLib.</li>
+  <li><strong>C++ Search Engine</strong>: The core search engine (80% of database performance) is written in C++ for raw speed and efficient resource use. Milvus uses assembly-level optimizations and smart multi-threading to squeeze every bit of performance from your hardware.</li>
+  <li><strong>Column-Oriented Design</strong>: Milvus only reads the exact data it needs for a query, not entire rows. This drastically reduces data access and allows operations to work on entire columns at once, making everything much faster.</li>
+</ul>
+
+<h2 id="qdrant-vs-milvus-which-vector-database-is-right-for-you">Qdrant vs Milvus: Which Vector Database is Right for You?</h2>
+
+<p>Both Qdrant and Milvus have unique strengths. Here’s what you need to know:</p>
+
+<h3 id="searching-and-indexing">Searching and Indexing</h3>
+
+<ul>
+  <li><strong>Text Search</strong>: Both support it, but differently. Qdrant uses full-text filtering while Milvus offers wildcard searches (like “app*” to match “apple”).</li>
+  <li><strong>Query Style</strong>: Qdrant keeps it simple with text-only queries. Milvus gives you more flexibility with wildcard patterns.</li>
+</ul>
+
+<h3 id="multi-vector-search">Multi-Vector Search</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Currently <strong>doesn’t support</strong> searching across multiple vector fields at once, which limits complex queries.</li>
+  <li><strong>Milvus</strong>: <strong>Fully supports</strong> multi-field vector searches, perfect for applications needing detailed, nuanced searching.</li>
+</ul>
+
+<h3 id="speed-and-growth">Speed and Growth</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Built for <strong>raw speed</strong> with large datasets. Its architecture is optimized for lightning-fast similarity searches, making it perfect for real-time apps.</li>
+  <li><strong>Milvus</strong>: Focuses on <strong>massive scale</strong>. It can handle enormous amounts of data across distributed systems without slowing down - ideal if your data will grow significantly.</li>
+</ul>
+
+<h3 id="best-use-cases">Best Use Cases</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Perfect for apps needing <strong>fast similarity searches</strong> like recommendation engines, image search, and content discovery.</li>
+  <li><strong>Milvus</strong>: Ideal for <strong>complex AI applications</strong> working with multi-dimensional data and complex query needs.</li>
+</ul>
+
+<h3 id="key-advantages">Key Advantages</h3>
+
+<ul>
+  <li><strong>Qdrant’s Filtering</strong>: Offers extremely precise filtering options to narrow down search results exactly how you need them.</li>
+  <li><strong>Milvus’s Indexing Options</strong>: Supports many different indexing methods (IVF, HNSW, ANNOY), giving you flexibility to choose the best approach for your specific data type and search patterns.</li>
+</ul>
+
+  </article>
+
+  <div class="post-navigation">
+    
+    <a href="/2025/04/16/mcp-agent.html" class="post-nav-prev">
+      ← A2A and MCP: What is the difference?
+    </a>
+    
+
+    
+    <a href="/2025/10/01/welcome.html" class="post-nav-next">
+      Welcome to My Research Blog →
+    </a>
+    
+  </div>
+
+  <div class="text-center" style="margin-top: 3rem;">
+    <a href="/blog/" class="btn btn-secondary">Back to Blog</a>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      sidebar.classList.toggle('is-open');
+      document.body.classList.toggle('menu-open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        sidebar.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  </script>
+</body>
+</html>

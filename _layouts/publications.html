@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  {{ content }}
+
+  {% assign journals = site.publications | where: "type", "journal" | sort: 'year' | reverse %}
+  {% assign conferences = site.publications | where: "type", "conference" | sort: 'year' | reverse %}
+
+  {% if journals.size > 0 %}
+  <section class="section">
+    <h2>Journal Publications</h2>
+    <div class="publications-list">
+      {% for pub in journals %}
+      {% include pub-list.html pub=pub %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if conferences.size > 0 %}
+  <section class="section">
+    <h2>Conference Publications</h2>
+    <div class="publications-list">
+      {% for pub in conferences %}
+      {% include pub-list.html pub=pub %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if journals.size == 0 and conferences.size == 0 %}
+  <section class="section">
+    <p class="text-center">No publications available yet.</p>
+  </section>
+  {% endif %}
+</div>
