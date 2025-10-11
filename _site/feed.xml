@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-10-11T21:47:29+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tuan-Cuong Vuong — AI Research</title><subtitle>AI Researcher | Research Assistant</subtitle><entry><title type="html">Welcome to My Research Blog</title><link href="http://localhost:4000/2025/10/01/welcome.html" rel="alternate" type="text/html" title="Welcome to My Research Blog" /><published>2025-10-01T10:00:00+07:00</published><updated>2025-10-01T10:00:00+07:00</updated><id>http://localhost:4000/2025/10/01/welcome</id><content type="html" xml:base="http://localhost:4000/2025/10/01/welcome.html"><![CDATA[<p>Welcome to my research blog! I’m excited to launch this platform where I’ll share insights, updates, and thoughts about my work in artificial intelligence and machine learning.</p>
+
+<h2 id="what-to-expect">What to Expect</h2>
+
+<p>In this blog, you’ll find:</p>
+
+<ul>
+  <li><strong>Research Updates</strong>: Regular updates about my ongoing research projects, including preliminary findings and new directions</li>
+  <li><strong>Technical Tutorials</strong>: In-depth guides and tutorials on machine learning techniques, tools, and best practices</li>
+  <li><strong>Paper Reviews</strong>: Critical analysis and summaries of influential papers in AI/ML</li>
+  <li><strong>Conference Reports</strong>: Summaries and highlights from conferences I attend</li>
+  <li><strong>Thoughts on AI</strong>: Reflections on the broader implications of AI technology and research trends</li>
+</ul>
+
+<h2 id="my-research-focus">My Research Focus</h2>
+
+<p>My work primarily focuses on:</p>
+
+<ol>
+  <li><strong>Multimodal Learning</strong>: Developing systems that can understand and integrate information from multiple modalities (vision, language, audio)</li>
+  <li><strong>Explainable AI</strong>: Creating interpretable machine learning models, particularly for high-stakes applications like healthcare</li>
+  <li><strong>Robustness and Security</strong>: Improving the reliability and security of deep learning systems against adversarial attacks</li>
+  <li><strong>AI for Healthcare</strong>: Applying machine learning to medical imaging and clinical decision support</li>
+</ol>
+
+<h2 id="join-the-conversation">Join the Conversation</h2>
+
+<p>I believe in open science and collaborative research. Feel free to reach out if you have questions, suggestions, or are interested in collaboration. You can find my contact information on the <a href="/contact/">Contact page</a>.</p>
+
+<p>Stay tuned for more content, and thank you for visiting!</p>
+
+<hr />
+
+<p>Looking forward to sharing this journey with you!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Welcome to my research blog! I’m excited to launch this platform where I’ll share insights, updates, and thoughts about my work in artificial intelligence and machine learning.]]></summary></entry><entry><title type="html">Qdrant vs Milvus: Which Vector Database is Right for You?</title><link href="http://localhost:4000/2025/04/17/qdrant-milvus.html" rel="alternate" type="text/html" title="Qdrant vs Milvus: Which Vector Database is Right for You?" /><published>2025-04-17T10:00:00+07:00</published><updated>2025-04-17T10:00:00+07:00</updated><id>http://localhost:4000/2025/04/17/qdrant-milvus</id><content type="html" xml:base="http://localhost:4000/2025/04/17/qdrant-milvus.html"><![CDATA[<p>Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle <strong>unstructured data like text, images, and audio</strong> much better than regular databases can.</p>
+
+<h2 id="qdrant-what-is-it">Qdrant: What is it?</h2>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img0.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p>Qdrant is an open-source, cloud-native vector database. It powers search engines, recommendation systems, and machine learning models that need to find similar items quickly.</p>
+
+<h3 id="key-features-of-qdrant-vector-database">Key Features of Qdrant Vector Database</h3>
+
+<ul>
+  <li><strong>Advanced Similarity Search</strong>: Qdrant offers multiple ways to compare vectors (dot product, cosine similarity, Euclidean distance, Manhattan distance). You can attach extra JSON data (called “payload”) to each vector.</li>
+  <li><strong>Built Using Rust</strong>: Qdrant is powered by Rust, making it extremely fast and memory-safe without needing garbage collection. It’s as fast as C/C++ with fewer bugs.</li>
+  <li><strong>Easy Scaling</strong>: Qdrant grows with your needs - both up (vertical) and out (horizontal). It uses the Raft protocol for clusters with replicas and shards, handling huge datasets without problems. You can create partitions within a single collection using payload.</li>
+  <li><strong>Powerful Filtering</strong>: Beyond storing JSON with vectors, Qdrant lets you filter results using keywords, full-text search, number ranges, nested filters, and even location-based searches.</li>
+  <li><strong>Hybrid Search</strong>: Qdrant works with both dense and sparse vectors. Sparse vectors (mostly zeros) help find exact keyword matches while dense vectors find semantically similar results. Combining them gives you the best of both worlds.</li>
+  <li><strong>Smart Compression</strong>: Qdrant offers three ways to shrink vector size: scalar quantization (balances accuracy and speed), binary quantization (fastest, smallest), and product quantization (highest compression for limited memory).</li>
+  <li><strong>Flexible Deployment</strong>: Run Qdrant locally with Docker (free), use the managed Qdrant Cloud service (scalable, easy setup), or choose Hybrid Cloud to connect your own systems with their managed service.</li>
+</ul>
+
+<h2 id="milvus-what-is-it">Milvus: What is it?</h2>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img1.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p>Milvus is an open-source vector database built to handle massive amounts of vector data. It’s extremely scalable and fast, supporting many different ways to search for similar vectors.</p>
+
+<p><img src="/assets/img/blog_posts/2025-17-04-img2.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<ul>
+  <li><strong>Milvus Lite</strong>: A simple Python library you can add to your apps. Perfect for quick tests in Jupyter Notebooks or small devices with limited resources.</li>
+  <li><strong>Milvus Standalone</strong>: Everything packed into one Docker image for easy setup on a single machine.</li>
+  <li><strong>Milvus Distributed</strong>: Runs on Kubernetes clusters with a cloud-native design that can handle billions of vectors. Critical parts have backups to prevent failures.</li>
+</ul>
+
+<h3 id="what-makes-milvus-so-fast">What Makes Milvus so Fast?</h3>
+
+<ul>
+  <li><strong>Hardware Optimization</strong>: Milvus is tuned for many different hardware setups including AVX512, SIMD, GPUs, and NVMe SSDs to get maximum speed everywhere.</li>
+  <li><strong>Superior Search Algorithms</strong>: Supports many search methods (IVF, HNSW, DiskANN, etc.) that have been heavily optimized. Milvus is <strong>30%-70% faster</strong> than popular alternatives like FAISS and HNSWLib.</li>
+  <li><strong>C++ Search Engine</strong>: The core search engine (80% of database performance) is written in C++ for raw speed and efficient resource use. Milvus uses assembly-level optimizations and smart multi-threading to squeeze every bit of performance from your hardware.</li>
+  <li><strong>Column-Oriented Design</strong>: Milvus only reads the exact data it needs for a query, not entire rows. This drastically reduces data access and allows operations to work on entire columns at once, making everything much faster.</li>
+</ul>
+
+<h2 id="qdrant-vs-milvus-which-vector-database-is-right-for-you">Qdrant vs Milvus: Which Vector Database is Right for You?</h2>
+
+<p>Both Qdrant and Milvus have unique strengths. Here’s what you need to know:</p>
+
+<h3 id="searching-and-indexing">Searching and Indexing</h3>
+
+<ul>
+  <li><strong>Text Search</strong>: Both support it, but differently. Qdrant uses full-text filtering while Milvus offers wildcard searches (like “app*” to match “apple”).</li>
+  <li><strong>Query Style</strong>: Qdrant keeps it simple with text-only queries. Milvus gives you more flexibility with wildcard patterns.</li>
+</ul>
+
+<h3 id="multi-vector-search">Multi-Vector Search</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Currently <strong>doesn’t support</strong> searching across multiple vector fields at once, which limits complex queries.</li>
+  <li><strong>Milvus</strong>: <strong>Fully supports</strong> multi-field vector searches, perfect for applications needing detailed, nuanced searching.</li>
+</ul>
+
+<h3 id="speed-and-growth">Speed and Growth</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Built for <strong>raw speed</strong> with large datasets. Its architecture is optimized for lightning-fast similarity searches, making it perfect for real-time apps.</li>
+  <li><strong>Milvus</strong>: Focuses on <strong>massive scale</strong>. It can handle enormous amounts of data across distributed systems without slowing down - ideal if your data will grow significantly.</li>
+</ul>
+
+<h3 id="best-use-cases">Best Use Cases</h3>
+
+<ul>
+  <li><strong>Qdrant</strong>: Perfect for apps needing <strong>fast similarity searches</strong> like recommendation engines, image search, and content discovery.</li>
+  <li><strong>Milvus</strong>: Ideal for <strong>complex AI applications</strong> working with multi-dimensional data and complex query needs.</li>
+</ul>
+
+<h3 id="key-advantages">Key Advantages</h3>
+
+<ul>
+  <li><strong>Qdrant’s Filtering</strong>: Offers extremely precise filtering options to narrow down search results exactly how you need them.</li>
+  <li><strong>Milvus’s Indexing Options</strong>: Supports many different indexing methods (IVF, HNSW, ANNOY), giving you flexibility to choose the best approach for your specific data type and search patterns.</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle unstructured data like text, images, and audio much better than regular databases can.]]></summary></entry><entry><title type="html">A2A and MCP: What is the difference?</title><link href="http://localhost:4000/2025/04/16/mcp-agent.html" rel="alternate" type="text/html" title="A2A and MCP: What is the difference?" /><published>2025-04-16T10:00:00+07:00</published><updated>2025-04-16T10:00:00+07:00</updated><id>http://localhost:4000/2025/04/16/mcp-agent</id><content type="html" xml:base="http://localhost:4000/2025/04/16/mcp-agent.html"><![CDATA[<p>For developers and companies exploring AI, now is the perfect time to start learning and building. A2A and MCP together mark the beginning of a more standardized, secure approach to enterprise AI.</p>
+
+<h2 id="what-is-googles-agent2agent-a2a-protocol">What is Google’s Agent2Agent (A2A) protocol?</h2>
+
+<p>A2A is an open protocol that lets AI agents talk to each other, no matter who made them or how. Think of it as a <strong>universal translator</strong> for AI agents from different companies and frameworks like LangChain, AutoGen, and LlamaIndex.</p>
+
+<p>Google released A2A in early April 2025 at Google Cloud Next. They created it with help from <strong>over 50 technology partners</strong>, including big companies like Atlassian, Salesforce, SAP, and MongoDB. This means A2A isn’t just Google’s idea—it’s an industry-wide effort toward standardization.</p>
+
+<p>At its core, A2A treats each AI agent like a networked service with a standard interface. It’s similar to how websites use HTTP to communicate, but for AI agents instead. Just like MCP solves the NxM problem, A2A makes it easy to connect different agents without writing custom code for each pair.</p>
+
+<h3 id="the-problem-siloed-agents-in-a-collaborative-world">The Problem: Siloed Agents in a Collaborative World</h3>
+
+<p>Before A2A, AI agents were like islands. Each one had its own language and interface, making it hard for them to work together. It was like trying to talk to someone who speaks a different language.</p>
+
+<p>Imagine this workflow:</p>
+
+<ol>
+  <li>A customer service chatbot (Agent A, Framework X) finds a complex technical issue</li>
+  <li>It needs to check a product knowledge base (Agent B, Framework Y) for information</li>
+  <li>Agent B checks logs and finds a specific software version causing the problem</li>
+  <li>It needs to contact a support agent (Agent C, Framework Z) to handle the issue</li>
+</ol>
+
+<p><strong>Without A2A, each agent would need custom code to talk to the others</strong>. This “silo” problem blocks innovation and limits multi-agent systems. We need agents to:</p>
+
+<ul>
+  <li><strong>Discover</strong>: Find other agents and know what they can do</li>
+  <li><strong>Communicate</strong>: Share information (text, data, files) clearly</li>
+  <li><strong>Coordinate</strong>: Handle tasks with multiple steps and multiple agents</li>
+  <li><strong>Negotiate</strong>: Agree on how to interact (text, forms, audio)</li>
+  <li><strong>Secure</strong>: Interact safely with proper authentication</li>
+</ul>
+
+<h3 id="the-solution-a2a-protocol">The Solution: A2A Protocol</h3>
+
+<p>A2A solves these challenges by providing a standard interface. Key benefits include:</p>
+
+<ul>
+  <li><strong>Openness</strong>: A2A is an open protocol—anyone can implement or improve it</li>
+  <li><strong>Interoperability</strong>: Agents can talk regardless of their technology or vendor</li>
+  <li><strong>Task-Oriented</strong>: Communication uses “Tasks” for tracking work clearly</li>
+  <li><strong>Capability Discovery</strong>: Agents advertise their skills via standardized “Agent Cards”</li>
+  <li><strong>Rich Data Exchange</strong>: Supports various data types (text, JSON, forms, files)</li>
+  <li><strong>Flexibility</strong>: Works with different interaction patterns (request-response, streaming, webhooks)</li>
+  <li><strong>Security</strong>: Built-in support for authentication and authorization</li>
+</ul>
+
+<h3 id="a2a-interaction-flow">A2A interaction flow</h3>
+
+<p><img src="/assets/img/blog_posts/2025-16-04-img0.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p><strong>Discovery Phase</strong>: When you ask “Can you help plan my Tokyo business trip?”, your AI:</p>
+
+<ol>
+  <li>Recognizes it needs help with flights, hotels, and activities</li>
+  <li>Finds specialized agents for each task</li>
+  <li>Gets their <strong>Agent Cards</strong> to check if they’re right for the job</li>
+</ol>
+
+<p><strong>Task Initiation</strong>: Your AI sends a job to the travel booking agent:</p>
+
+<ol>
+  <li>Creates a request with a unique ID (POST to /taskssend)</li>
+  <li>Includes your message: “Find flights to Tokyo May 15-20”</li>
+</ol>
+
+<p><strong>Processing</strong>: The booking agent can:</p>
+
+<ul>
+  <li><strong>Complete the task</strong> right away: “Here are your flight options”</li>
+  <li><strong>Ask for more details</strong> (state: input-required): “Which airline do you prefer?”</li>
+  <li><strong>Work on a complex task</strong> (state: working): “I’m searching for the best deals”</li>
+</ul>
+
+<p><strong>Multi-Turn Conversations</strong>: Agents can have back-and-forth exchanges:</p>
+
+<ul>
+  <li>Booking agent: “Do you want direct flights only?”</li>
+  <li>Your AI: “Yes, direct flights only”</li>
+  <li>All messages stay within the same task ID</li>
+</ul>
+
+<p><strong>Status Updates</strong>: For longer tasks, A2A offers:</p>
+
+<ul>
+  <li><strong>Polling</strong>: Your AI checks for updates regularly</li>
+  <li><strong>Streaming</strong>: Agent sends live updates (Server-Sent Events)</li>
+  <li><strong>Push notifications</strong>: Agent sends updates to a callback URL</li>
+</ul>
+
+<p><strong>Task Completion</strong>: The agent finishes by:</p>
+
+<ul>
+  <li>Marking the task as <strong>completed</strong> with results</li>
+  <li>Marking it as <strong>failed</strong> if problems occur</li>
+  <li>Marking it as <strong>canceled</strong> if stopped early</li>
+</ul>
+
+<p>A2A doesn’t just let AIs chat—it lets them <strong>truly collaborate</strong> toward a common goal, creating results better than what any single agent could produce alone.</p>
+
+<h2 id="what-is-mcp-and-how-does-it-work">What Is MCP and How Does It Work?</h2>
+
+<p>MCP creates <strong>clear rules</strong> for how AI can find, connect to, and use external tools – like searching databases or running commands. This helps models do more than just use their training data, making them more flexible and aware of the world.</p>
+
+<p><img src="/assets/img/blog_posts/2025-16-04-img1.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" />
+ <img src="/assets/img/blog_posts/2025-16-04-img2.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<p>To get started with MCP:</p>
+
+<ul>
+  <li><strong>Install an MCP server</strong> for your tool or data. Anthropic offers ready-made servers for popular systems (Google Drive, Slack, Git, databases). Setup often needs just one command with your login details.</li>
+  <li><strong>Connect your AI app</strong> to the server. With Claude’s app, add servers through the interface. For custom apps, use the MCP SDK and provide the server address.</li>
+  <li>Once connected, your AI gets <strong>new abilities</strong> from the server: tools, resources, and prompt templates.</li>
+  <li><strong>Start using it</strong>. Your AI can now call MCP tools when needed. Check logs to make sure connections work properly.</li>
+</ul>
+
+<h2 id="a2a-vs-mcp-partners-not-rivals">A2A vs. MCP: Partners, Not Rivals</h2>
+
+<p>A2A and MCP aren’t competing - they work together by solving different parts of the AI integration puzzle.</p>
+
+<p><img src="/assets/img/blog_posts/2025-16-04-img3.png" alt="Technical Overview of MCP" title="Technical Overview of MCP" /></p>
+
+<ol>
+  <li><strong>MCP connects AI to tools</strong> (vertical integration)</li>
+  <li><strong>A2A connects AI to other AI</strong> (horizontal integration)</li>
+</ol>
+
+<p>Google deliberately made A2A work with MCP. They even launched their Vertex AI agent builder with built-in MCP support the same day as A2A. This isn’t just marketing - it’s good technical design.</p>
+
+<p>Think of it this way: <strong>MCP gives agents tools, A2A lets them talk while using those tools</strong>. MCP equips individual agents with abilities, while A2A helps them work as a team.</p>
+
+<p>In a complete system, an agent might use MCP to get information from a database, then use A2A to send that information to another agent for analysis. Together, these protocols create better solutions for complex tasks while making development much easier.</p>
+
+<h2 id="the-future-of-a2a">The Future of A2A</h2>
+
+<p>A2A will keep improving, with plans for:</p>
+
+<ul>
+  <li><strong>Better security</strong>: Formal authorization and credentials in Agent Cards</li>
+  <li><strong>Richer interactions</strong>: Changing how agents communicate during tasks (adding audio/video)</li>
+  <li><strong>Faster communication</strong>: Improved streaming and notifications</li>
+</ul>
+
+<p>The most exciting possibility is that <strong>A2A could become for AI what HTTP was for the web</strong> - a catalyst for massive innovation. As more people adopt it, we might see specialized agent teams for different industries and eventually a global network of AI agents working together.</p>
+
+<p>For developers and companies exploring AI, now is the perfect time to start learning and building. A2A and MCP together mark the beginning of a more standardized, secure approach to enterprise AI.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[For developers and companies exploring AI, now is the perfect time to start learning and building. A2A and MCP together mark the beginning of a more standardized, secure approach to enterprise AI.]]></summary></entry></feed>

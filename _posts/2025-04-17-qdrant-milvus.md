@@ -1,18 +1,15 @@
 ---
-title: 'Qdrant vs Milvus: Which Vector Database is Right for You?'
-date: 2025-04-17
-permalink: /posts/2025/04/qdrant-milvus/
-tags:
-  - Qdrant
-  - Milvus
-  - Vector Database
+layout: post
+title: "Qdrant vs Milvus: Which Vector Database is Right for You?"
+date: 2025-04-17 10:00:00 +0700
+thumbnail: "/assets/img/blog_posts/2025-17-04-img0.png"
 ---
 
 Vector databases store data as vectors (lists of numbers) instead of using traditional rows and columns. They use high-dimensional vector embeddings to handle **unstructured data like text, images, and audio** much better than regular databases can.
 
 ## Qdrant: What is it?
 
- ![Technical Overview of MCP](/images/blog_posts/2025-17-04-img0.png "Technical Overview of MCP")
+ ![Technical Overview of MCP](/assets/img/blog_posts/2025-17-04-img0.png "Technical Overview of MCP")
 
 Qdrant is an open-source, cloud-native vector database. It powers search engines, recommendation systems, and machine learning models that need to find similar items quickly.
 
@@ -28,11 +25,11 @@ Qdrant is an open-source, cloud-native vector database. It powers search engines
 
 ## Milvus: What is it?
 
- ![Technical Overview of MCP](/images/blog_posts/2025-17-04-img1.png "Technical Overview of MCP")
+ ![Technical Overview of MCP](/assets/img/blog_posts/2025-17-04-img1.png "Technical Overview of MCP")
 
 Milvus is an open-source vector database built to handle massive amounts of vector data. It's extremely scalable and fast, supporting many different ways to search for similar vectors.
 
- ![Technical Overview of MCP](/images/blog_posts/2025-17-04-img2.png "Technical Overview of MCP")
+ ![Technical Overview of MCP](/assets/img/blog_posts/2025-17-04-img2.png "Technical Overview of MCP")
 
 - **Milvus Lite**: A simple Python library you can add to your apps. Perfect for quick tests in Jupyter Notebooks or small devices with limited resources.
 - **Milvus Standalone**: Everything packed into one Docker image for easy setup on a single machine.
