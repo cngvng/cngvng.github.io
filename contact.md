@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Contact & Office Hours"
+permalink: /contact/
 ---
 
 <div class="page-header">
