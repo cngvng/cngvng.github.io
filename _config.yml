@@ -26,15 +26,27 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-# Pagination
+# Pagination (GitHub Pages compatible)
 paginate: 8
-paginate_path: "/blog/page:num/"
+paginate_path: "/page:num/"
 
 # Collections
 collections:
   publications:
     output: true
     permalink: /publications/:name/
+
+# GitHub Pages safe mode
+safe: true
+
+# Highlighter compatible with GitHub Pages
+highlighter: rouge
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 # Defaults
 defaults:
