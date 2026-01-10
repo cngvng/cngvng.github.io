@@ -2,11 +2,13 @@
 title: "Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach"
 authors: 
   - name: "Tuan-Cuong Vuong"
+    type: "co-first"
   - name: "Cong Chi Nguyen"
   - name: "Van-Cuong Pham"
   - name: "Thi-Thanh-Huyen Le"
   - name: "Xuan-Nam Tran"
   - name: "Thien Van Luong"
+    type: "corresponding"
 year: 2024
 venue: "NOLTA 2024"
 type: "conference"

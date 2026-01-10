@@ -1,11 +1,11 @@
-- title: "Machine Learning & Deep Learning"
-  description: "Developing predictive models and representation learning methods for complex data."
+- title: "Generative AI & Multimodal Learning"
+  description: "Modeling across text–image–signal–structured data; multimodal fusion and VLMs; predictive representation learning (JEPA-style) for robust, compact, and transferable features."
 
-- title: "Multi-Agent Systems"
-  description: "Building agentic frameworks with LLMs for knowledge-intensive reasoning tasks."
+- title: "Agentic AI & Multi-Agent Systems"
+  description: "Designing LLM-driven multi-agent frameworks (coordination, tool-use, planning, self-reflection) to collaboratively solve complex tasks such as multi-document summarization."
 
-- title: "AI for Healthcare"
-  description: "Applying ML/AI to healthcare applications for clinical decision support."
+- title: "Efficient & Trustworthy LLMs"
+  description: "RAG and graph-augmented RAG, quantization/distillation (e.g., QLoRA/AWQ), inference optimization (KV-cache, batching), privacy/security for self-hosted deployments."
 
-- title: "Generative AI"
-  description: "Exploring LLM efficiency, reliability, and privacy-aware deployment."
+- title: "Applied AI"
+  description: "Healthcare (clinical NLP, EHR/text–image fusion, decision support) and Business (analytics, knowledge management, operations) with measurable impact."

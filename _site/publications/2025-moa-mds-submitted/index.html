@@ -26,6 +26,10 @@
         <a href="/" class="header-brand">
           <span class="header-name">Tuan-Cuong Vuong</span>
         </a>
+        <a href="https://phenikaa-uni.edu.vn" target="_blank" rel="noopener" class="header-logo-link">
+          <img src="https://phenikaa-uni.edu.vn:3600/pu/en/modules/logoen.png" alt="Phenikaa University"
+            class="header-logo">
+        </a>
       </div>
       <nav class="header-nav">
         <a href="/" >About</a>
@@ -102,18 +106,6 @@
     <li class="news-item">
       <span class="news-date">Aug. 2025</span>
       <span class="news-text">Started as Research Assistant at Business AI Lab, NEU.
-</span>
-    </li>
-    
-    <li class="news-item">
-      <span class="news-date">Jun. 2024</span>
-      <span class="news-text">Our work on BERT-based Vietnamese Bank Document Classification accepted at CITA 2024.
-</span>
-    </li>
-    
-    <li class="news-item">
-      <span class="news-date">Mar. 2024</span>
-      <span class="news-text">Published ML-based Intrusion Detection research in Neural Computing and Applications.
 </span>
     </li>
     
@@ -197,73 +189,7 @@ robust, generalizable, and data-efficient approach to MDS.</p>
     <div class="pub-content">
       <h2 id="abstract">Abstract</h2>
 
-<p>Multi-Document Summarization (MDS) play a critical role in distilling essential information from collections of textual data. Existing approaches often struggle to capture complex inter-document relationships, rely heavily on large amounts of labeled data for supervised training, or exhibit limited generalization across domains and languages.</p>
-
-<p>To address these limitations, we introduce the Mixture of Agents (MoA) framework, a novel, training-free and modular paradigm for MDS. MoA orchestrates three specialized agents operating in parallel across refinement layers:</p>
-
-<ol>
-  <li><strong>Extractor Agent</strong>: Selects key sentences from input documents</li>
-  <li><strong>KGSum Agent</strong>: Constructs and summarizes knowledge graphs</li>
-  <li><strong>Abstractor Agent</strong>: Generates coherent abstractive summaries</li>
-</ol>
-
-<p>Each agent leverages pre-trained Large Language Models (LLMs), enabling MoA to operate without task-specific supervised training.</p>
-
-<h2 id="key-contributions">Key Contributions</h2>
-
-<ol>
-  <li><strong>Novel Multi-Agent Architecture</strong>: First training-free mixture of agents framework for MDS</li>
-  <li><strong>Knowledge Graph Integration</strong>: Innovative use of knowledge graphs for capturing inter-document relationships</li>
-  <li><strong>Cross-lingual Evaluation</strong>: Comprehensive evaluation on both English and Vietnamese datasets</li>
-  <li><strong>State-of-the-art Performance</strong>: Achieves SOTA ROUGE scores on Multi-News dataset</li>
-  <li><strong>Training-free Approach</strong>: No need for task-specific supervised training</li>
-</ol>
-
-<h2 id="experimental-results">Experimental Results</h2>
-
-<h3 id="datasets-evaluated">Datasets Evaluated</h3>
-<ul>
-  <li><strong>Multi-News</strong> (English): State-of-the-art ROUGE scores</li>
-  <li><strong>Multi-XScience</strong> (English): Competitive performance</li>
-  <li><strong>VN-MDS</strong> (Vietnamese): Superior results</li>
-  <li><strong>ViMs</strong> (Vietnamese): Competitive performance</li>
-</ul>
-
-<h3 id="key-findings">Key Findings</h3>
-<ul>
-  <li>MoA demonstrates robust performance across languages and domains</li>
-  <li>Training-free approach shows superior generalization</li>
-  <li>Knowledge graph integration effectively captures inter-document relationships</li>
-</ul>
-
-<h2 id="method-overview">Method Overview</h2>
-
-<h3 id="mixture-of-agents-moa-framework">Mixture of Agents (MoA) Framework</h3>
-<ul>
-  <li><strong>Modular Design</strong>: Three specialized agents working in parallel</li>
-  <li><strong>Refinement Layers</strong>: Multi-layer architecture for iterative improvement</li>
-  <li><strong>LLM-Powered</strong>: Leverages pre-trained language models</li>
-  <li><strong>Training-Free</strong>: No supervised training required</li>
-</ul>
-
-<h3 id="agent-architecture">Agent Architecture</h3>
-<ol>
-  <li><strong>Extractor Agent</strong>: Sentence-level key information extraction</li>
-  <li><strong>KGSum Agent</strong>: Knowledge graph construction and summarization</li>
-  <li><strong>Abstractor Agent</strong>: Final coherent summary generation</li>
-</ol>
-
-<h2 id="publication-status">Publication Status</h2>
-
-<ul>
-  <li><strong>Status</strong>: Submitted to Neural Computing and Applications</li>
-  <li><strong>Submission Date</strong>: November 15, 2025</li>
-  <li><strong>arXiv Preprint</strong>: Available at arXiv:2410.02827</li>
-</ul>
-
-<h2 id="keywords">Keywords</h2>
-
-<p>Multi-Document Summarization, Large Language Models, Mixture of Agents, Knowledge Graphs, Training-Free Methods</p>
+<p>Multi-Document Summarization (MDS) play a critical role in distilling essential information from collections of textual data. Existing approaches often struggle to capture complex inter-document relationships, rely heavily on large amounts of labeled data for supervised training, or exhibit limited generalization across domains and languages. To address these limitations, we present a training-free mixture-of-agents framework for MDS that leverages the complementary strengths of large language models (LLMs) and knowledge graphs. Our approach decomposes summarization into specialized agent tasks: extractive selection, knowledge-aware abstraction, and iterative refinement, each operating without task-specific fine-tuning. We unify their outputs using a multi-perspective consistency mechanism guided by LLMs.} Experiments across four datasets in English and Vietnamese demonstrate state-of-the-art or competitive performance, validating the effectiveness and adaptability of our modular design.</p>
 
     </div>
     

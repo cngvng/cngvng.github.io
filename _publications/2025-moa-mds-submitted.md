@@ -13,7 +13,7 @@ type: "journal"
 status: "submitted"
 tags: ["Multi-Agent", "NLP", "LLM"]
 preview_image: "/assets/img/publications/moa-mds-2025.png"
-paper_link: "https://arxiv.org/abs/example"
+paper_link: "https://cngvng.github.io/publications"
 date: "2025-11-15"
 abstract: |
   Multi-Document Summarization (MDS) play a critical role in distilling essential information from 
@@ -34,56 +34,4 @@ abstract: |
 
 ## Abstract
 
-Multi-Document Summarization (MDS) play a critical role in distilling essential information from collections of textual data. Existing approaches often struggle to capture complex inter-document relationships, rely heavily on large amounts of labeled data for supervised training, or exhibit limited generalization across domains and languages.
-
-To address these limitations, we introduce the Mixture of Agents (MoA) framework, a novel, training-free and modular paradigm for MDS. MoA orchestrates three specialized agents operating in parallel across refinement layers:
-
-1. **Extractor Agent**: Selects key sentences from input documents
-2. **KGSum Agent**: Constructs and summarizes knowledge graphs 
-3. **Abstractor Agent**: Generates coherent abstractive summaries
-
-Each agent leverages pre-trained Large Language Models (LLMs), enabling MoA to operate without task-specific supervised training.
-
-## Key Contributions
-
-1. **Novel Multi-Agent Architecture**: First training-free mixture of agents framework for MDS
-2. **Knowledge Graph Integration**: Innovative use of knowledge graphs for capturing inter-document relationships
-3. **Cross-lingual Evaluation**: Comprehensive evaluation on both English and Vietnamese datasets
-4. **State-of-the-art Performance**: Achieves SOTA ROUGE scores on Multi-News dataset
-5. **Training-free Approach**: No need for task-specific supervised training
-
-## Experimental Results
-
-### Datasets Evaluated
-- **Multi-News** (English): State-of-the-art ROUGE scores
-- **Multi-XScience** (English): Competitive performance
-- **VN-MDS** (Vietnamese): Superior results
-- **ViMs** (Vietnamese): Competitive performance
-
-### Key Findings
-- MoA demonstrates robust performance across languages and domains
-- Training-free approach shows superior generalization
-- Knowledge graph integration effectively captures inter-document relationships
-
-## Method Overview
-
-### Mixture of Agents (MoA) Framework
-- **Modular Design**: Three specialized agents working in parallel
-- **Refinement Layers**: Multi-layer architecture for iterative improvement
-- **LLM-Powered**: Leverages pre-trained language models
-- **Training-Free**: No supervised training required
-
-### Agent Architecture
-1. **Extractor Agent**: Sentence-level key information extraction
-2. **KGSum Agent**: Knowledge graph construction and summarization
-3. **Abstractor Agent**: Final coherent summary generation
-
-## Publication Status
-
-- **Status**: Submitted to Neural Computing and Applications
-- **Submission Date**: November 15, 2025
-- **arXiv Preprint**: Available at arXiv:2410.02827
-
-## Keywords
-
-Multi-Document Summarization, Large Language Models, Mixture of Agents, Knowledge Graphs, Training-Free Methods
+Multi-Document Summarization (MDS) play a critical role in distilling essential information from collections of textual data. Existing approaches often struggle to capture complex inter-document relationships, rely heavily on large amounts of labeled data for supervised training, or exhibit limited generalization across domains and languages. To address these limitations, we present a training-free mixture-of-agents framework for MDS that leverages the complementary strengths of large language models (LLMs) and knowledge graphs. Our approach decomposes summarization into specialized agent tasks: extractive selection, knowledge-aware abstraction, and iterative refinement, each operating without task-specific fine-tuning. We unify their outputs using a multi-perspective consistency mechanism guided by LLMs.} Experiments across four datasets in English and Vietnamese demonstrate state-of-the-art or competitive performance, validating the effectiveness and adaptability of our modular design.

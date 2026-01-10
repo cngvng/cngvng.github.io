@@ -19,12 +19,12 @@ permalink: /experience/
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>Phenikaa University</h3>
-              <span class="timeline-date">2020 - 2024</span>
+              <span class="timeline-date">Sep 2021 - June 2025</span>
             </div>
-            <p class="timeline-role">B.Sc. in Information Technology</p>
-            <p class="timeline-org">School of Information Technology</p>
+            <p class="timeline-role">Bachelor of Science in Computer Science</p>
+            <p class="timeline-org">Specialization in Data Science and AI</p>
             <p class="timeline-location">Hanoi, Vietnam</p>
-            <p class="timeline-note">GPA: 3.5/4.0</p>
+            <p class="timeline-note">GPA: 3.23/4.00</p>
           </div>
         </div>
       </div>
@@ -39,13 +39,12 @@ permalink: /experience/
           <div class="timeline-dot active"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Phenikaa University</h3>
-              <span class="timeline-date">2023 - Present</span>
+              <h3>Business AI Lab (NEU)</h3>
+              <span class="timeline-date">Aug 2025 - Present</span>
             </div>
             <p class="timeline-role">Research Assistant</p>
-            <p class="timeline-org">AIoT Lab, School of Information Technology</p>
             <p class="timeline-location">Hanoi, Vietnam</p>
-            <p class="timeline-note">Working with <a href="#">Dr. Thien Van Luong</a> and <a href="#">Dr. Trang Mai Xuan</a></p>
+            <p class="timeline-note">Led research on multimodal AI for Healthcare and Business/Economics.</p>
           </div>
         </div>
         
@@ -53,12 +52,37 @@ permalink: /experience/
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>National Economics University</h3>
-              <span class="timeline-date">2022 - 2023</span>
+              <h3>BSM Labs</h3>
+              <span class="timeline-date">Apr 2024 - June 2025</span>
             </div>
-            <p class="timeline-role">Research Collaborator</p>
-            <p class="timeline-org">Faculty of Information Systems</p>
+            <p class="timeline-role">Full Time AI Engineer</p>
             <p class="timeline-location">Hanoi, Vietnam</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>AIoT Lab (Phenikaa Univ)</h3>
+              <span class="timeline-date">Oct 2021 - Present</span>
+            </div>
+            <p class="timeline-role">Research Assistant</p>
+            <p class="timeline-location">Hanoi, Vietnam</p>
+            <p class="timeline-note">Agentic AI, self-supervised representations, and JEPA-style objectives.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Shibaura Institute of Technology</h3>
+              <span class="timeline-date">Dec 2022 - Feb 2023</span>
+            </div>
+            <p class="timeline-role">Exchange Student (Talent Student)</p>
+            <p class="timeline-location">Tokyo, Japan</p>
+            <p class="timeline-note">IoT framework for elderly cardiac arrest detection.</p>
           </div>
         </div>
       </div>
@@ -71,49 +95,45 @@ permalink: /experience/
     
     <div class="skills-grid">
       <div class="skill-category">
-        <h4>AI & Machine Learning</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Multi-Agent Systems</span>
-          <span class="skill-tag">LLM Fine-tuning</span>
-          <span class="skill-tag">RAG</span>
-          <span class="skill-tag">Deep Learning</span>
-          <span class="skill-tag">NLP</span>
-          <span class="skill-tag">Transformers</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>Programming & Frameworks</h4>
+        <h4>Programming & Languages</h4>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">HuggingFace</span>
-          <span class="skill-tag">LangChain</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">JavaScript</span>
-        </div>
-      </div>
-      
-      <div class="skill-category">
-        <h4>Research & Documentation</h4>
-        <div class="skill-tags">
+          <span class="skill-tag">C++</span>
           <span class="skill-tag">LaTeX</span>
-          <span class="skill-tag">Overleaf</span>
-          <span class="skill-tag">Academic Writing</span>
-          <span class="skill-tag">Literature Review</span>
-          <span class="skill-tag">Experiment Design</span>
         </div>
       </div>
       
       <div class="skill-category">
-        <h4>Tools & Platforms</h4>
+        <h4>LLM & Agents</h4>
         <div class="skill-tags">
-          <span class="skill-tag">Git/GitHub</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">Weights & Biases</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Jupyter</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">OpenAI-agents</span>
+          <span class="skill-tag">LlamaIndex</span>
+          <span class="skill-tag">Qdrant</span>
+          <span class="skill-tag">n8n</span>
+          <span class="skill-tag">Unsloth</span>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h4>ML & Deep Learning</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">Transformers</span>
+          <span class="skill-tag">BERT/GPT</span>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h4>Data, DevOps & Cloud</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Pandas/NumPy</span>
+          <span class="skill-tag">Faiss/ChromaDB/Neo4j</span>
+          <span class="skill-tag">Docker/GitHub Actions</span>
+          <span class="skill-tag">AWS/GCP</span>
+          <span class="skill-tag">Self-hosted Clusters</span>
         </div>
       </div>
     </div>

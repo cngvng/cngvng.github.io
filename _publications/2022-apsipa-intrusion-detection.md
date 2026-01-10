@@ -2,10 +2,12 @@
 title: "A Comparison of Feature Selection and Feature Extraction in Network Intrusion Detection Systems"
 authors: 
   - name: "Tuan-Cuong Vuong"
+    type: "co-first"
   - name: "Hung Tran"
   - name: "Mai Xuan Trang"
   - name: "Vu-Duc Ngo"
   - name: "Thien Van Luong"
+    type: "corresponding"
 year: 2022
 venue: "APSIPA ASC 2022"
 type: "conference"

@@ -2,6 +2,8 @@
 title: "BERT-VBD: Vietnamese Multi-Document Summarization Framework"
 authors: 
   - name: "Tuan-Cuong Vuong"
+    type: "co-first"
+    type: "corresponding"
   - name: "Mai Xuan Trang"
   - name: "Luong Van Thien"
 year: 2024
