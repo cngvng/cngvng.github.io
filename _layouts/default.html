@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale | default: 'en-US' }}">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="site-wrapper">
-    {% include sidebar.html %}
+  <!-- Header Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="{{ '/' | relative_url }}" class="header-brand">
+          <span class="header-name">{{ site.owner_name }}</span>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>About</a>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active" {%
+          endif %}>Publications</a>
+        <a href="{{ '/experience/' | relative_url }}" {% if page.url=='/experience/' %}class="active" {% endif
+          %}>Experience</a>
+        <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active" {% endif %}>Blogs</a>
+        <a href="{{ '/activities/' | relative_url }}" {% if page.url=='/activities/' %}class="active" {% endif
+          %}>Activities & Honors</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="main-content" id="main-content">
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+  <div class="page-container">
+    <div class="page-grid">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        {% include sidebar.html %}
+      </aside>
 
-      {{ content }}
-    </main>
+      <!-- Main Content -->
+      <main class="main-content">
+        {{ content }}
+      </main>
+    </div>
   </div>
 
+  <footer class="site-footer">
+    <p>© {{ 'now' | date: "%Y" }} {{ site.owner_name }}. All rights reserved.</p>
+    <p class="footer-updated">Last Updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+  </footer>
+
   <script>
-    const toggle = document.querySelector('.mobile-menu-toggle');
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const sidebar = document.querySelector('.sidebar');
 
-    toggle.addEventListener('click', () => {
-      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !isExpanded);
-      sidebar.classList.toggle('is-open');
-      document.body.classList.toggle('menu-open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!sidebar.contains(e.target) && !toggle.contains(e.target)) {
-        toggle.setAttribute('aria-expanded', 'false');
-        sidebar.classList.remove('is-open');
-        document.body.classList.remove('menu-open');
-      }
-    });
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('is-open');
+        document.body.classList.toggle('menu-open');
+      });
+    }
   </script>
 </body>
+
 </html>

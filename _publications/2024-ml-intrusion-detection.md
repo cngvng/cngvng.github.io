@@ -1,9 +1,16 @@
 ---
 title: "Machine learning-based intrusion detection: feature selection versus feature extraction"
-authors: ["Vu-Duc Ngo", "Tuan-Cuong Vuong", "Thien Van Luong", "Hung Tran"]
+authors: 
+  - name: "Vu-Duc Ngo"
+  - name: "Tuan-Cuong Vuong"
+  - name: "Thien Van Luong"
+  - name: "Hung Tran"
 year: 2024
 venue: "Cluster Computing"
 type: "journal"
+tags: ["Machine Learning", "Security"]
+preview_image: "/assets/img/publications/cluster-2024.png"
+paper_link: "https://doi.org/10.1007/s10586-023-04160-1"
 volume: "27"
 issue: "3"
 pages: "2365-2379"

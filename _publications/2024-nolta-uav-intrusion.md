@@ -1,9 +1,18 @@
 ---
 title: "Effective Intrusion Detection for UAV Communications using Autoencoder-based Feature Extraction and Machine Learning Approach"
-authors: ["Tuan-Cuong Vuong", "Cong Chi Nguyen", "Van-Cuong Pham", "Thi-Thanh-Huyen Le", "Xuan-Nam Tran", "Thien Van Luong"]
+authors: 
+  - name: "Tuan-Cuong Vuong"
+  - name: "Cong Chi Nguyen"
+  - name: "Van-Cuong Pham"
+  - name: "Thi-Thanh-Huyen Le"
+  - name: "Xuan-Nam Tran"
+  - name: "Thien Van Luong"
 year: 2024
-venue: "The 2024 International Symposium on Nonlinear Theory and Its Applications (NOLTA2024)"
+venue: "NOLTA 2024"
 type: "conference"
+tags: ["Machine Learning", "Security", "UAV"]
+preview_image: "/assets/img/publications/nolta-2024.png"
+paper_link: "https://arxiv.org/abs/2410.02827"
 arxiv: "arXiv:2410.02827"
 doi: "https://doi.org/10.48550/arXiv.2410.02827"
 abstract: |

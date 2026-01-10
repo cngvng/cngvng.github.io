@@ -1,13 +1,18 @@
 ---
 title: "BERT-VBD: Vietnamese Multi-Document Summarization Framework"
-authors: ["Tuan-Cuong Vuong", "Mai, Xuan Trang", "Luong, Van Thien"]
+authors: 
+  - name: "Tuan-Cuong Vuong"
+  - name: "Mai Xuan Trang"
+  - name: "Luong Van Thien"
 year: 2024
-venue: "Proceedings of the 13th International Conference on Information Technology and Its Applications (CITA 2024)"
+venue: "CITA 2024"
 type: "conference"
+tags: ["NLP", "Summarization"]
+preview_image: "/assets/img/publications/bert-vbd.png"
+paper_link: "https://elib.vku.udn.vn/handle/123456789/4014"
 pages: "70-80"
 publisher: "Vietnam-Korea University of Information and Communication Technology"
 isbn: "978-604-80-9774-5"
-uri: "https://elib.vku.udn.vn/handle/123456789/4014"
 doi: "https://doi.org/10.48550/arXiv.2409.12134"
 pdf: ""
 code: ""

@@ -1,10 +1,19 @@
 ---
 title: "Training-Free Mixture of Agents for Multi-Document Summarization Leveraging LLMs and Knowledge Graphs"
-authors: ["Tuan-Cuong Vuong", "Trang Mai Xuan", "Cuong Nguyen Tien", "Luong Thien Van"]
+authors: 
+  - name: "Tuan-Cuong Vuong"
+    type: "co-first"
+  - name: "Trang Mai Xuan"
+    type: "corresponding"
+  - name: "Cuong Nguyen Tien"
+  - name: "Luong Thien Van"
 year: 2025
 venue: "Neural Computing and Applications"
 type: "journal"
 status: "submitted"
+tags: ["Multi-Agent", "NLP", "LLM"]
+preview_image: "/assets/img/publications/moa-mds-2025.png"
+paper_link: "https://arxiv.org/abs/example"
 date: "2025-11-15"
 abstract: |
   Multi-Document Summarization (MDS) play a critical role in distilling essential information from 

@@ -1,47 +1,122 @@
 ---
 layout: default
+title: "Publications"
+permalink: /publications/
 ---
 
-<div class="page-header">
-  <div class="container">
-    <h1>{{ page.title }}</h1>
-    {% if page.description %}
-    <p class="page-description">{{ page.description }}</p>
-    {% endif %}
+<div class="page-content">
+  <div class="page-header-inline">
+    <h1>Publications</h1>
+  </div>
+
+  <div class="filter-section">
+    <div class="filter-row">
+      <input type="text" id="pub-search" class="search-input" placeholder="Search publications...">
+      <select id="year-filter" class="filter-select">
+        <option value="">All Years</option>
+      </select>
+      <label class="filter-checkbox">
+        <input type="checkbox" id="co-first-filter"> Co-first author
+      </label>
+      <label class="filter-checkbox">
+        <input type="checkbox" id="corresponding-filter"> Corresponding author
+      </label>
+    </div>
+
+    <div class="filter-tags" id="tag-filters">
+      <button class="filter-tag active" data-tag="">All</button>
+    </div>
+  </div>
+
+  <div class="author-legend">
+    <sup>*</sup> Co-first author &nbsp;&nbsp; <sup>†</sup> Corresponding author
+  </div>
+
+  <div class="publications-list" id="publications-list">
+    {% assign sorted_pubs = site.publications | sort: 'year' | reverse %}
+    {% for pub in sorted_pubs %}
+    {% include publication-card.html pub=pub %}
+    {% endfor %}
   </div>
 </div>
 
-<div class="container">
-  {{ content }}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const publications = document.querySelectorAll('.pub-card');
+    const searchInput = document.getElementById('pub-search');
+    const yearFilter = document.getElementById('year-filter');
+    const tagFilters = document.getElementById('tag-filters');
 
-  {% assign journals = site.publications | where: "type", "journal" | sort: 'year' | reverse %}
-  {% assign conferences = site.publications | where: "type", "conference" | sort: 'year' | reverse %}
+    // Collect unique years and tags
+    const years = new Set();
+    const tags = new Set();
 
-  {% if journals.size > 0 %}
-  <section class="section">
-    <h2>Journal Publications</h2>
-    <div class="publications-list">
-      {% for pub in journals %}
-      {% include pub-list.html pub=pub %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+    publications.forEach(pub => {
+      const year = pub.dataset.year;
+      const pubTags = pub.dataset.tags ? pub.dataset.tags.split(',') : [];
 
-  {% if conferences.size > 0 %}
-  <section class="section">
-    <h2>Conference Publications</h2>
-    <div class="publications-list">
-      {% for pub in conferences %}
-      {% include pub-list.html pub=pub %}
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+      if (year) years.add(year);
+      pubTags.forEach(tag => { if (tag.trim()) tags.add(tag.trim()); });
+    });
 
-  {% if journals.size == 0 and conferences.size == 0 %}
-  <section class="section">
-    <p class="text-center">No publications available yet.</p>
-  </section>
-  {% endif %}
-</div>
+    // Populate year filter
+    [...years].sort().reverse().forEach(year => {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      yearFilter.appendChild(option);
+    });
+
+    // Populate tag filters
+    [...tags].sort().forEach(tag => {
+      const button = document.createElement('button');
+      button.className = 'filter-tag';
+      button.dataset.tag = tag;
+      button.textContent = tag;
+      tagFilters.appendChild(button);
+    });
+
+    // Filter function
+    function filterPublications() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedYear = yearFilter.value;
+      const activeTag = document.querySelector('.filter-tag.active')?.dataset.tag || '';
+      const coFirstOnly = document.getElementById('co-first-filter').checked;
+      const correspondingOnly = document.getElementById('corresponding-filter').checked;
+
+      publications.forEach(pub => {
+        const title = pub.querySelector('.pub-title')?.textContent.toLowerCase() || '';
+        const authors = pub.querySelector('.pub-authors')?.textContent.toLowerCase() || '';
+        const venue = pub.querySelector('.pub-venue')?.textContent.toLowerCase() || '';
+        const year = pub.dataset.year;
+        const pubTags = pub.dataset.tags ? pub.dataset.tags.split(',') : [];
+        const authorsHtml = pub.querySelector('.pub-authors')?.innerHTML || '';
+
+        const matchesSearch = !searchTerm ||
+          title.includes(searchTerm) ||
+          authors.includes(searchTerm) ||
+          venue.includes(searchTerm);
+        const matchesYear = !selectedYear || year === selectedYear;
+        const matchesTag = !activeTag || pubTags.includes(activeTag);
+        const matchesCoFirst = !coFirstOnly || authorsHtml.includes('<sup>*</sup>');
+        const matchesCorresponding = !correspondingOnly || authorsHtml.includes('<sup>†</sup>');
+
+        pub.style.display = (matchesSearch && matchesYear && matchesTag && matchesCoFirst && matchesCorresponding) ? '' : 'none';
+      });
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', filterPublications);
+    yearFilter.addEventListener('change', filterPublications);
+    document.getElementById('co-first-filter').addEventListener('change', filterPublications);
+    document.getElementById('corresponding-filter').addEventListener('change', filterPublications);
+
+    tagFilters.addEventListener('click', function (e) {
+      if (e.target.classList.contains('filter-tag')) {
+        document.querySelectorAll('.filter-tag').forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        filterPublications();
+      }
+    });
+  });
+</script>
