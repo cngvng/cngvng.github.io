@@ -1,0 +1,19 @@
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+/home/cngvng/.rbenv/versions/3.3.4/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-4o59mn sitelibdir\=./.gem.20260115-75612-4o59mn clean
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-4o59mn sitelibdir\=./.gem.20260115-75612-4o59mn
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-4o59mn sitelibdir\=./.gem.20260115-75612-4o59mn install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20260115-75612-4o59mn
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-4o59mn sitelibdir\=./.gem.20260115-75612-4o59mn clean

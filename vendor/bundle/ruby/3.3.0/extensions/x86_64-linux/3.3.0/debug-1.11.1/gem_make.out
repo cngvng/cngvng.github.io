@@ -1,0 +1,19 @@
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+/home/cngvng/.rbenv/versions/3.3.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-rua9md sitelibdir\=./.gem.20260115-75612-rua9md clean
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-rua9md sitelibdir\=./.gem.20260115-75612-rua9md
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-rua9md sitelibdir\=./.gem.20260115-75612-rua9md install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20260115-75612-rua9md/debug
+
+current directory: /home/cngvng/Works/code/cngvng-tech/cngvng.github.io/vendor/bundle/ruby/3.3.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260115-75612-rua9md sitelibdir\=./.gem.20260115-75612-rua9md clean

@@ -31,14 +31,66 @@
             class="header-logo">
         </a>
       </div>
-      <nav class="header-nav">
+
+      <!-- Desktop Navigation -->
+      <nav class="header-nav desktop-nav">
         <a href="/" >About</a>
         <a href="/publications/" >Publications</a>
         <a href="/experience/" >Experience</a>
         <a href="/blog/" >Blogs</a>
         <a href="/activities/" >Activities & Honors</a>
       </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" aria-hidden="true">
+      <a href="/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4M12 8h.01" />
+        </svg>
+        About
+      </a>
+      <a href="/publications/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        Publications
+      </a>
+      <a href="/experience/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        Experience
+      </a>
+      <a href="/blog/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M12 20h9" />
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        </svg>
+        Blogs
+      </a>
+      <a href="/activities/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+        Activities & Honors
+      </a>
+    </nav>
   </header>
 
   <div class="page-container">
@@ -120,7 +172,7 @@
     <header class="post-header">
       <h1 class="post-title">A2A and MCP: What is the difference?</h1>
       <div class="post-meta">
-        <time datetime="2025-04-16T03:00:00+00:00">April 16, 2025</time>
+        <time datetime="2025-04-16T10:00:00+07:00">April 16, 2025</time>
         
         <div class="post-tags">
           
@@ -303,18 +355,32 @@
 
   <footer class="site-footer">
     <p>© 2026 Tuan-Cuong Vuong. All rights reserved.</p>
-    <p class="footer-updated">Last Updated: January 10, 2026</p>
+    <p class="footer-updated">Last Updated: January 15, 2026</p>
   </footer>
 
   <script>
     // Mobile menu toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-    if (mobileToggle) {
+    if (mobileToggle && mobileNav) {
       mobileToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('is-open');
-        document.body.classList.toggle('menu-open');
+        const isOpen = mobileNav.classList.toggle('is-open');
+        mobileToggle.classList.toggle('is-active', isOpen);
+        mobileToggle.setAttribute('aria-expanded', isOpen);
+        mobileNav.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+          mobileNav.classList.remove('is-open');
+          mobileToggle.classList.remove('is-active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('menu-open');
+        }
       });
     }
   </script>
