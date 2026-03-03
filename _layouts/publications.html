@@ -33,9 +33,39 @@ permalink: /publications/
   </div>
 
   <div class="publications-list" id="publications-list">
-    {% assign sorted_pubs = site.publications | sort: 'year' | reverse %}
-    {% for pub in sorted_pubs %}
-    {% include publication-card.html pub=pub %}
+    {% comment %} Get all unique years and sort descending {% endcomment %}
+    {% assign all_years = site.publications | map: 'year' | uniq | sort | reverse %}
+    
+    {% for year in all_years %}
+      {% comment %} Get all publications for this year {% endcomment %}
+      {% assign year_pubs = site.publications | where: 'year', year %}
+      
+      {% comment %} Separate first-author and non-first-author publications {% endcomment %}
+      {% assign first_author_pubs = "" | split: "" %}
+      {% assign other_pubs = "" | split: "" %}
+      
+      {% for pub in year_pubs %}
+        {% assign first_author = pub.authors[0].name | default: pub.authors[0] %}
+        {% if first_author contains "Tuan-Cuong" or first_author contains "Cuong Vuong" %}
+          {% assign first_author_pubs = first_author_pubs | push: pub %}
+        {% else %}
+          {% assign other_pubs = other_pubs | push: pub %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} Sort both groups by title {% endcomment %}
+      {% assign first_author_pubs = first_author_pubs | sort: 'title' %}
+      {% assign other_pubs = other_pubs | sort: 'title' %}
+      
+      {% comment %} Display first-author publications first {% endcomment %}
+      {% for pub in first_author_pubs %}
+        {% include publication-card.html pub=pub %}
+      {% endfor %}
+      
+      {% comment %} Then display other publications {% endcomment %}
+      {% for pub in other_pubs %}
+        {% include publication-card.html pub=pub %}
+      {% endfor %}
     {% endfor %}
   </div>
 </div>
