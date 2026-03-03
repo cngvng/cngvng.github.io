@@ -13,12 +13,11 @@ venue: "APSIPA ASC 2022"
 type: "conference"
 tags: ["Machine Learning", "Security"]
 preview_image: "/assets/img/publications/apsipa-2022.png"
-paper_link: "https://doi.org/10.23919/APSIPAASC55919.2022.9980111"
+paper_link: "https://doi.org/10.23919/APSIPAASC55919.2022.9979923"
 pages: "1798-1804"
 publisher: "IEEE"
-doi: "https://doi.org/10.23919/APSIPAASC55919.2022.9980111"
-pdf: ""
-code: ""
+doi: "https://doi.org/10.23919/APSIPAASC55919.2022.9979923"
+pdf: "/assets/papers/apsipa-2022.pdf"
 slides: ""
 abstract: |
   Internet of Things (IoT) has been playing an important role in many sectors, such as smart cities, 

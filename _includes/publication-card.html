@@ -63,6 +63,16 @@
             <a href="{{ include.pub.paper_link | default: include.pub.pdf | relative_url }}" class="pub-link"
                 target="_blank">Paper</a>
             {% endif %}
+            {% unless include.pub.doi %}
+            {% if include.pub.pdf %}
+            {% assign pdf_url = include.pub.pdf %}
+            {% if pdf_url contains '://' %}
+            <a href="{{ pdf_url }}" class="pub-link" target="_blank">PDF</a>
+            {% else %}
+            <a href="{{ pdf_url | relative_url }}" class="pub-link" target="_blank">PDF</a>
+            {% endif %}
+            {% endif %}
+            {% endunless %}
             {% if include.pub.code %}
             <a href="{{ include.pub.code }}" class="pub-link" target="_blank">Code</a>
             {% endif %}

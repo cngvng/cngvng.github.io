@@ -10,10 +10,12 @@ authors:
 year: 2025
 venue: "Neural Computing and Applications"
 type: "journal"
-status: "submitted"
+status: "revised"
 tags: ["Multi-Agent", "NLP", "LLM"]
 preview_image: "/assets/img/publications/moa-mds-2025.png"
 paper_link: "https://cngvng.github.io/publications"
+pdf: "/assets/papers/moa-mds-2025.pdf"
+code: "https://github.com/cngvng/MDSAgent"
 date: "2025-11-15"
 abstract: |
   Multi-Document Summarization (MDS) play a critical role in distilling essential information from 

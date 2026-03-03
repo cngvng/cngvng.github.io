@@ -1,0 +1,10 @@
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/sass-embedded-1.63.6/ext/sass
+/Users/cngvng/.rbenv/versions/2.7.0/bin/ruby -I/Users/cngvng/.rbenv/versions/2.7.0/lib/ruby/2.7.0/rubygems -rrubygems /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/extensions/-darwin-24/2.7.0/sass-embedded-1.63.6 RUBYLIBDIR\=/Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/extensions/-darwin-24/2.7.0/sass-embedded-1.63.6
+fetch https://github.com/sass/dart-sass/releases/download/1.63.6/dart-sass-1.63.6-macos-arm64.tar.gz
+mkdir -p .
+tar -vxC . -f dart-sass-1.63.6-macos-arm64.tar.gz --no-same-owner --no-same-permissions
+x dart-sass/src/LICENSE
+x dart-sass/src/dart
+x dart-sass/src/sass.snapshot
+x dart-sass/sass
+rm dart-sass-1.63.6-macos-arm64.tar.gz

@@ -16,8 +16,8 @@ pages: "70-80"
 publisher: "Vietnam-Korea University of Information and Communication Technology"
 isbn: "978-604-80-9774-5"
 doi: "https://doi.org/10.48550/arXiv.2409.12134"
-pdf: ""
-code: ""
+pdf: "https://arxiv.org/pdf/2409.12134"
+code: "https://github.com/cngvng/BERT-VBD"
 slides: ""
 abstract: |
   In tackling the challenge of Multi-Document Summarization (MDS), numerous methods have been proposed, 

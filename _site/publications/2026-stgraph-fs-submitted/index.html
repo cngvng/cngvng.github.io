@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>STGraph-FS: Structural Temporal Graph with Feature Selection for Ethereum Fraud Detection | Tuan-Cuong Vuong — AI Research</title>
+  <meta name="description"
+    content="Abstract">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/publications/2026-stgraph-fs-submitted/">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Tuan-Cuong Vuong — AI Research">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header Bar -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/" class="header-brand">
+          <span class="header-name">Tuan-Cuong Vuong</span>
+        </a>
+        <a href="https://phenikaa-uni.edu.vn" target="_blank" rel="noopener" class="header-logo-link">
+          <img src="https://phenikaa-uni.edu.vn:3600/pu/en/modules/logoen.png" alt="Phenikaa University"
+            class="header-logo">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="header-nav desktop-nav">
+        <a href="/" >About</a>
+        <a href="/publications/" class="active" >Publications</a>
+        <a href="/experience/" >Experience</a>
+        <a href="/blog/" >Blogs</a>
+        <a href="/activities/" >Activities & Honors</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" aria-hidden="true">
+      <a href="/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4M12 8h.01" />
+        </svg>
+        About
+      </a>
+      <a href="/publications/" class="active" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        Publications
+      </a>
+      <a href="/experience/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        Experience
+      </a>
+      <a href="/blog/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M12 20h9" />
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        </svg>
+        Blogs
+      </a>
+      <a href="/activities/" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+        Activities & Honors
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+    <div class="page-grid">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <!-- Profile Section -->
+<div class="sidebar-section profile-section">
+  <div class="profile-avatar">
+    
+    <img src="/assets/img/profile.png" alt="Tuan-Cuong Vuong">
+    
+  </div>
+  <h2 class="profile-name">Tuan-Cuong Vuong</h2>
+  <p class="profile-email">
+    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+    </svg>
+    cuong.vuongtuan@phenikaa-uni.edu.vn
+  </p>
+  <p class="profile-title">Research Assistant</p>
+  <p class="profile-affiliation">
+    <a href="https://phenikaa-uni.edu.vn" target="_blank">Phenikaa University</a>
+  </p>
+  <p class="profile-school">School of Information Technology</p>
+</div>
+
+<!-- Quick Links Section -->
+<div class="sidebar-section">
+  <h3 class="section-title">Quick Links</h3>
+  <div class="quick-links-grid">
+    
+    <a href="https://scholar.google.com/citations?user=GJuxF5QAAAAJ&hl=en" target="_blank" rel="noopener" class="quick-link">Google Scholar</a>
+    
+    
+    <a href="https://github.com/cngvng" target="_blank" rel="noopener" class="quick-link">GitHub</a>
+    
+    
+    <a href="https://www.researchgate.net/profile/Cuong-Vuong-6?ev=hdr_xprf" target="_blank" rel="noopener" class="quick-link">ResearchGate</a>
+    
+    
+    <a href="https://orcid.org/0000-0002-0999-1950" target="_blank" rel="noopener" class="quick-link">ORCID</a>
+    
+    
+    <a href="https://www.linkedin.com/in/cng-vng" target="_blank" rel="noopener" class="quick-link">LinkedIn</a>
+    
+    
+    <a href="https://x.com/cngvng413" target="_blank" rel="noopener" class="quick-link">X</a>
+    
+  </div>
+</div>
+
+<!-- Recent News Section -->
+<div class="sidebar-section">
+  <h3 class="section-title">Recent News</h3>
+  <ul class="news-list">
+    
+    <li class="news-item">
+      <span class="news-date">Feb. 2026</span>
+      <span class="news-text">Submitted two papers to CITA 2026: HERMES (Knowledge Graph Reasoning for Patient Outcome Prediction) and Random Undersampling for Intrusion Detection.
+</span>
+    </li>
+    
+    <li class="news-item">
+      <span class="news-date">Jan. 2026</span>
+      <span class="news-text">Three journal papers submitted: STGraph-FS (IEEE TAI), LLM-Powered UAV IDS (Cluster Computing), and PIKE (IEEE TNNLS).
+</span>
+    </li>
+    
+    <li class="news-item">
+      <span class="news-date">Dec. 2025</span>
+      <span class="news-text">Our paper on Training-Free MoA for Multi-Document Summarization was revised and resubmitted to Neural Computing and Applications.
+</span>
+    </li>
+    
+    <li class="news-item">
+      <span class="news-date">Sep. 2025</span>
+      <span class="news-text">Our paper on Training-Free MoA for MDS was submitted to Neural Computing and Applications.
+</span>
+    </li>
+    
+    <li class="news-item">
+      <span class="news-date">Aug. 2025</span>
+      <span class="news-text">Started as Research Assistant at Business AI Lab, NEU.
+</span>
+    </li>
+    
+  </ul>
+</div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="page-header">
+  <div class="container">
+    <h1>STGraph-FS: Structural Temporal Graph with Feature Selection for Ethereum Fraud Detection</h1>
+  </div>
+</div>
+
+<div class="container">
+  <article class="publication-detail">
+    <div class="pub-meta">
+      <p class="pub-authors">
+        
+          
+            {"name"=>"Duong Ngoc Vu", "type"=>"co-first"}
+          , 
+        
+          
+            {"name"=>"Tuan-Cuong Vuong"}
+          , 
+        
+          
+            {"name"=>"Kim-Ngan Thi Nguyen"}
+          , 
+        
+          
+            {"name"=>"Tien-Cuong Nguyen"}
+          , 
+        
+          
+            {"name"=>"Vu-Duc Ngo"}
+          , 
+        
+          
+            {"name"=>"Trong-Nghia Nguyen"}
+          , 
+        
+          
+            {"name"=>"Mai Xuan Trang"}
+          , 
+        
+          
+            {"name"=>"Huan Vu"}
+          , 
+        
+          
+            {"name"=>"Thien Van Luong", "type"=>"corresponding"}
+          
+        
+      </p>
+
+      <p class="pub-venue">
+        <strong>IEEE Transactions on Artificial Intelligence</strong> (2026)
+        
+        <span class="badge badge-journal">Journal</span>
+        
+      </p>
+
+      <div class="pub-links">
+        
+        <a href="/assets/papers/stgraph-fs-2026.pdf" class="btn btn-primary">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+          </svg>
+          PDF
+        </a>
+        
+
+        
+
+        
+
+        
+
+        
+      </div>
+    </div>
+
+    
+    <div class="pub-abstract">
+      <h2>Abstract</h2>
+      <p>Ethereum fraud detection is crucial for maintaining the security and trustworthiness of blockchain 
+ecosystems. This paper proposes STGraph-FS, a novel framework that combines structural temporal graph 
+neural networks with feature selection techniques for effective Ethereum fraud detection. Our approach 
+captures both the structural properties of transaction networks and their temporal evolution patterns, 
+while simultaneously identifying the most relevant features for fraud detection. Experimental results 
+demonstrate the effectiveness of our method in detecting fraudulent activities in Ethereum networks.</p>
+
+    </div>
+    
+
+    
+    <div class="pub-content">
+      <h2 id="abstract">Abstract</h2>
+
+<p>Ethereum fraud detection is crucial for maintaining the security and trustworthiness of blockchain ecosystems. This paper proposes STGraph-FS, a novel framework that combines structural temporal graph neural networks with feature selection techniques for effective Ethereum fraud detection. Our approach captures both the structural properties of transaction networks and their temporal evolution patterns, while simultaneously identifying the most relevant features for fraud detection. Experimental results demonstrate the effectiveness of our method in detecting fraudulent activities in Ethereum networks.</p>
+
+<h2 id="key-contributions">Key Contributions</h2>
+
+<ol>
+  <li><strong>Structural Temporal Graph Framework</strong>: Novel integration of structural and temporal information in Ethereum transaction networks</li>
+  <li><strong>Feature Selection</strong>: Adaptive feature selection mechanism for identifying relevant fraud indicators</li>
+  <li><strong>Comprehensive Evaluation</strong>: Extensive experiments on real-world Ethereum transaction data</li>
+  <li><strong>Superior Performance</strong>: Improved detection accuracy compared to existing methods</li>
+</ol>
+
+<h2 id="keywords">Keywords</h2>
+
+<p>Ethereum, Fraud Detection, Graph Neural Networks, Feature Selection, Blockchain Security, Temporal Graphs</p>
+
+    </div>
+    
+
+    <div class="pub-navigation">
+      <a href="/publications/" class="btn btn-secondary">Back to Publications</a>
+    </div>
+  </article>
+</div>
+
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Tuan-Cuong Vuong. All rights reserved.</p>
+    <p class="footer-updated">Last Updated: March 03, 2026</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('is-open');
+        mobileToggle.classList.toggle('is-active', isOpen);
+        mobileToggle.setAttribute('aria-expanded', isOpen);
+        mobileNav.setAttribute('aria-hidden', !isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+          mobileNav.classList.remove('is-open');
+          mobileToggle.classList.remove('is-active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('menu-open');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

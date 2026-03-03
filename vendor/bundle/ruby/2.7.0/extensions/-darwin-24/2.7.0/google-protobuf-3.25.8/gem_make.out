@@ -1,0 +1,3 @@
+current directory: /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/google-protobuf-3.25.8/ext/google/protobuf_c
+/Users/cngvng/.rbenv/versions/2.7.0/bin/ruby -I/Users/cngvng/.rbenv/versions/2.7.0/lib/ruby/2.7.0/rubygems -rrubygems /Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/gems/rake-13.3.0/exe/rake RUBYARCHDIR\=/Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/extensions/-darwin-24/2.7.0/google-protobuf-3.25.8 RUBYLIBDIR\=/Users/cngvng/My-works/cngvng.github.io/vendor/bundle/ruby/2.7.0/extensions/-darwin-24/2.7.0/google-protobuf-3.25.8
+Skipping build of FFI; `gem install ffi-compiler` to enable.

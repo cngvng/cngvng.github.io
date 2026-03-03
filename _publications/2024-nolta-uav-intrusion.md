@@ -17,6 +17,8 @@ preview_image: "/assets/img/publications/nolta-2024.png"
 paper_link: "https://arxiv.org/abs/2410.02827"
 arxiv: "arXiv:2410.02827"
 doi: "https://doi.org/10.48550/arXiv.2410.02827"
+pdf: "https://arxiv.org/pdf/2410.02827"
+code: "https://github.com/cngvng/UAV-IDS"
 abstract: |
   This paper proposes a novel intrusion detection method for unmanned aerial vehicles (UAV) in the 
   presence of recent actual UAV intrusion dataset. In particular, in the first stage of our method, 
