@@ -16,6 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JRJ8K97FS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8JRJ8K97FS');
+  </script>
 </head>
 
 <body>
@@ -114,6 +124,13 @@
   <footer class="site-footer">
     <p>© {{ 'now' | date: "%Y" }} {{ site.owner_name }}. All rights reserved.</p>
     <p class="footer-updated">Last Updated: {{ 'now' | date: "%B %d, %Y" }}</p>
+    <p class="footer-visitor" style="margin-top: 10px; display: flex; justify-content: center;">
+      <a href="https://hits.seeyoufarm.com">
+        <img
+          src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://cngvng.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=true"
+          alt="Hits" />
+      </a>
+    </p>
   </footer>
 
   <script>
