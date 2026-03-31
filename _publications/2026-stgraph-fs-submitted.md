@@ -19,7 +19,7 @@ status: "Under Review"
 tags: ["Machine Learning", "Security", "Blockchain", "Graph Neural Networks"]
 preview_image: "/assets/img/publications/stgraph-fs-2026.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/stgraph-fs-2026.pdf"
+pdf: "https://drive.google.com/file/d/1N5al4RKaYYGIwLT3x9_VanD7ynlQS5uR/view?usp=sharing"
 abstract: |
   Ethereum fraud detection is crucial for maintaining the security and trustworthiness of blockchain 
   ecosystems. This paper proposes STGraph-FS, a novel framework that combines structural temporal graph 
