@@ -18,7 +18,6 @@ issue: "3"
 pages: "2365-2379"
 publisher: "Springer US"
 doi: "https://doi.org/10.1007/s10586-023-04160-1"
-pdf: "/assets/papers/cluster-2024.pdf"
 abstract: |
   Internet of Things (IoTs) has been playing an important role in many sectors, such as smart cities, 
   smart agriculture, smart healthcare, and smart manufacturing. However, IoT devices are highly vulnerable 

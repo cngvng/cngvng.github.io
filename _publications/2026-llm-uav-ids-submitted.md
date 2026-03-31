@@ -16,7 +16,7 @@ status: "Under Review"
 tags: ["Machine Learning", "Security", "UAV", "LLM"]
 preview_image: "/assets/img/publications/llm-uav-ids-2026.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/llm-uav-ids-2026.pdf"
+pdf: "https://drive.google.com/file/d/1kvYZvznrIM_mXML4B9a-kwiD6WDqeNgj/view?usp=sharing"
 abstract: |
   The rapid proliferation of Unmanned Aerial Vehicles (UAVs) in various applications has raised significant 
   security concerns, necessitating robust intrusion detection systems. This paper introduces a novel 

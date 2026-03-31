@@ -17,7 +17,7 @@ paper_link: "https://doi.org/10.23919/APSIPAASC55919.2022.9979923"
 pages: "1798-1804"
 publisher: "IEEE"
 doi: "https://doi.org/10.23919/APSIPAASC55919.2022.9979923"
-pdf: "/assets/papers/apsipa-2022.pdf"
+pdf: "https://drive.google.com/file/d/15Tlg8N09qcSMBh0S-xAsJh0fAOn46Ucc/view?usp=sharing"
 slides: ""
 abstract: |
   Internet of Things (IoT) has been playing an important role in many sectors, such as smart cities, 

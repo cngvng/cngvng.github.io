@@ -1,13 +1,17 @@
 ---
-title: "PIKE: A Multimodal Framework Fusing Physiological Priors and Knowledge Graphs for Short-Sequence EHR Prediction"
+title: "PIKE: A Multimodal Framework for Short-Sequence EHR Prediction via Physiology-Informed Temporal Modeling and Knowledge Graphs"
 authors: 
   - name: "Tuan-Cuong Vuong"
     type: "co-first"
   - name: "Trang Xuan Mai"
-    type: "corresponding"
   - name: "Son Thai Mai"
   - name: "Duong Tung Ta"
+  - name: "Vu-Duc Ngo"
+  - name: "Xuan-Nam Tran"
+  - name: "Tien-Cuong Nguyen"
+  - name: "Huan Vu"
   - name: "Thien Van Luong"
+      type: "corresponding"
 year: 2026
 venue: "IEEE Transactions on Neural Networks and Learning Systems"
 type: "journal"
@@ -15,7 +19,7 @@ status: "Under Review"
 tags: ["Machine Learning", "Healthcare", "Knowledge Graphs", "Multimodal Learning"]
 preview_image: "/assets/img/publications/pike-2026.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/pike-2026.pdf"
+pdf: "https://drive.google.com/file/d/1-Q5SUOV3hfUpgBmjbDwln1NKEh0a0px4/view?usp=sharing"
 code: "https://github.com/cngvng/pike"
 abstract: |
   Electronic Health Record (EHR) prediction from short sequences poses significant challenges due to limited 

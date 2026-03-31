@@ -17,7 +17,7 @@ status: "Under Review"
 tags: ["Machine Learning", "Security", "Imbalanced Learning"]
 preview_image: "/assets/img/publications/random-undersampling-2025.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/random-undersampling-cita2026.pdf"
+pdf: "https://drive.google.com/file/d/1dcLc0PVJ_hTKdkioRoblqm6HlkNbFwmc/view?usp=sharing"
 abstract: |
   Class imbalance is a prevalent challenge in network intrusion detection, where normal traffic significantly 
   outnumbers malicious activities. While various sophisticated techniques have been proposed to address this 

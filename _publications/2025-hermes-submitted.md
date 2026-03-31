@@ -17,7 +17,7 @@ status: "Under Review"
 tags: ["Machine Learning", "Healthcare", "Knowledge Graphs", "NLP"]
 preview_image: "/assets/img/publications/hermes-2025.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/hermes-cita2026.pdf"
+pdf: "https://drive.google.com/file/d/16dhPIoQOLVfBWBpvf64ygROHEpaENqrH/view?usp=sharing"
 code: "https://github.com/cngvng/HERMES"
 abstract: |
   Predicting patient outcomes from clinical notes is crucial for proactive healthcare management. This 

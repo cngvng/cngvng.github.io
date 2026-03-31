@@ -14,7 +14,7 @@ status: "revised"
 tags: ["Multi-Agent", "NLP", "LLM"]
 preview_image: "/assets/img/publications/moa-mds-2025.png"
 paper_link: "https://cngvng.github.io/publications"
-pdf: "/assets/papers/moa-mds-2025.pdf"
+pdf: "https://drive.google.com/file/d/1VSkBVlS7c1mm2dToFKUQ9ENY-cZmaolW/view?usp=sharing"
 code: "https://github.com/cngvng/MDSAgent"
 date: "2025-11-15"
 abstract: |
