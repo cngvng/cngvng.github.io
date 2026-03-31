@@ -11,7 +11,7 @@ authors:
   - name: "Tien-Cuong Nguyen"
   - name: "Huan Vu"
   - name: "Thien Van Luong"
-      type: "corresponding"
+    type: "corresponding"
 year: 2026
 venue: "IEEE Transactions on Neural Networks and Learning Systems"
 type: "journal"
