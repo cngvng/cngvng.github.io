@@ -124,12 +124,12 @@
   <footer class="site-footer">
     <p>© {{ 'now' | date: "%Y" }} {{ site.owner_name }}. All rights reserved.</p>
     <p class="footer-updated">Last Updated: {{ 'now' | date: "%B %d, %Y" }}</p>
-    <p class="footer-visitor" style="margin-top: 10px; display: flex; justify-content: center;">
+    <div class="footer-visitor-map">
       <script
         type="text/javascript"
         id="mapmyvisitors"
         src="https://mapmyvisitors.com/map.js?d=AxpTCtiGpAvX5vazgj-DaQIuKnzMi47wZZiCh87QPmg&amp;cl=ffffff&amp;w=a"></script>
-    </p>
+    </div>
   </footer>
 
   <script>
@@ -158,6 +158,26 @@
       });
     }
   </script>
+
+  <style>
+    .footer-visitor-map {
+      margin: 12px auto 0;
+      width: min(380px, 92vw);
+      max-height: 240px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .footer-visitor-map iframe,
+    .footer-visitor-map canvas,
+    .footer-visitor-map svg,
+    .footer-visitor-map img,
+    .footer-visitor-map div {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
 </body>
 
 </html>
